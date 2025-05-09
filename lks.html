@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKS Transformasi Geometri - Kelas 11 SMA</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        
+        .lks-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .soal {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .soal:last-child {
+            border-bottom: none;
+        }
+        
+        .soal p {
+            margin-bottom: 10px;
+        }
+        
+        .jawaban {
+            background-color: #f0f8ff;
+            padding: 12px;
+            border-left: 4px solid #3498db;
+            margin-top: 10px;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: vertical;
+            min-height: 60px;
+            font-family: inherit;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .info-box {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .petunjuk {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        @media print {
+            .no-print {
+                display: none;
+            }
+            
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            
+            .lks-container {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LEMBAR KERJA SISWA (LKS)</h1>
+        <p>Transformasi Geometri - Matematika Kelas 11 SMA</p>
+    </header>
+    
+    <div class="lks-container">
+        <div class="info-box">
+            <h3>Informasi Umum</h3>
+            <p><strong>Nama Siswa:</strong> ___________________________</p>
+            <p><strong>Kelas:</strong> __________ <strong>Tanggal:</strong> __________</p>
+            <p><strong>Tujuan Pembelajaran:</strong> Siswa mampu memahami dan menerapkan konsep transformasi geometri (translasi, refleksi, rotasi, dan dilatasi) dalam menyelesaikan masalah.</p>
+        </div>
+        
+        <section id="petunjuk">
+            <h2>Petunjuk Pengerjaan</h2>
+            <ol>
+                <li>Baca setiap soal dengan teliti sebelum menjawab</li>
+                <li>Kerjakan soal pada tempat yang disediakan</li>
+                <li>Gunakan alat tulis dan penggaris untuk menggambar jika diperlukan</li>
+                <li>Periksa kembali jawaban sebelum dikumpulkan</li>
+            </ol>
+        </section>
+        
+        <section id="soal-translasi">
+            <h2>A. Translasi (Pergeseran)</h2>
+            
+            <div class="soal">
+                <p>1. Diketahui titik A(3, -2). Tentukan koordinat bayangan titik A jika ditranslasikan oleh:</p>
+                <p>a) T(4, 5) → A'(..., ...)</p>
+                <textarea placeholder="Tulis jawaban Anda di sini..."></textarea>
+                <p>b) T(-1, 3) → A'(..., ...)</p>
+                <textarea placeholder="Tulis jawaban Anda di sini..."></textarea>
+                
+                <button class="btn no-print" onclick="toggleJawaban('jawaban1')">Tampilkan Pembahasan</button>
+                <div id="jawaban1" class="jawaban hidden">
+                    <p><strong>Pembahasan:</strong></p>
+                    <p>a) A'(3+4, -2+5) = A'(7, 3)</p>
+                    <p>b) A'(3+(-1), -2+3) = A'(2, 1)</p>
+                </div>
+            </div>
+            
+            <div class="soal">
+                <p>2. Segitiga ABC dengan A(1,2), B(4,2), dan C(2,5) ditranslasikan oleh T(3,-1). Tentukan koordinat bayangan segitiga tersebut!</p>
+                <textarea placeholder="Tulis jawaban Anda di sini..."></textarea>
+                
+                <button class="btn no-print" onclick="toggleJawaban('jawaban2')">Tampilkan Pembahasan</button>
+                <div id="jawaban2" class="jawaban hidden">
+                    <p><strong>Pembahasan:</strong></p>
+                    <p>A'(1+3, 2+(-1)) = A'(4, 1)</p>
+                    <p>B'(4+3, 2+(-1)) = B'(7, 1)</p>
+                    <p>C'(2+3, 5+(-1)) = C'(5, 4)</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="soal-refleksi">
+            <h2>B. Refleksi (Pencerminan)</h2>
+            
+            <div class="soal">
+                <p>3. Tentukan bayangan titik P(-3, 7) jika dicerminkan terhadap:</p>
+                <p>a) Sumbu x → P'(..., ...)</p>
+                <textarea placeholder="Tulis jawaban Anda di sini..."></textarea>
+                <p>b) Sumbu y → P'(..., ...)</p>
+                <textarea placeholder="Tulis jawaban Anda di sini..."></textarea>
+                <p>c) Garis y = x → P'(..., ...)</p>
+                <textarea placeholder="Tulis jawaban Anda di sini..."></textarea>
+                
+                <button class="btn no-print" onclick="toggleJawaban('jawaban3')">Tampilkan Pembahasan</button>
+                <div id="jawaban3" class="jawaban hidden">
+                    <p><strong>Pembahasan:</strong></p>
+                    <p>a) Refleksi sumbu x: (x,y) → (x,-y) → P'(-3, -7)</p>
+                    <p>b) Refleksi sumbu y: (x,y) → (-x,y) → P'(3, 7)</p>
+                    <p>c) Refleksi y = x: (x,y) → (y,x) → P'(7, -3)</p>
+                </div>
+            </div>
+            
+            <div class="soal">
+                <p>4. Gambarlah segiempat ABCD dengan A(1,1), B(3,1), C(3,3), dan D(1,3) kemudian tentukan bayangannya jika dicerminkan terhadap garis x = 2!</p>
+                <p class="petunjuk">Petunjuk: Buat sketsa pada kertas berpetak</p>
+                <textarea placeholder="Tulis koordinat bayangan dan penjelasan Anda di sini..."></textarea>
+            </div>
+        </section>
+        
+        <section id="soal-rotasi">
+            <h2>C. Rotasi (Perputaran)</h2>
+            
+            <div class="soal">
+                <p>5. Tentukan bayangan titik Q(5, -1) jika dirotasikan:</p>
+                <p>a) 90° berlawanan jarum jam dengan pusat (0,0) → Q'(..., ...)</p>
+                <textarea placeholder="Tulis jawaban Anda di sini..."></textarea>
+                <p>b) 180° dengan pusat (0,0) → Q'(..., ...)</p>
+                <textarea placeholder="Tulis jawaban Anda di sini..."></textarea>
+                
+                <button class="btn no-print" onclick="toggleJawaban('jawaban5')">Tampilkan Pembahasan</button>
+                <div id="jawaban5" class="jawaban hidden">
+                    <p><strong>Pembahasan:</strong></p>
+                    <p>a) Rotasi 90°: (x,y) → (-y,x) → Q'(1, 5)</p>
+                    <p>b) Rotasi 180°: (x,y) → (-x,-y) → Q'(-5, 1)</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="soal-dilatasi">
+            <h2>D. Dilatasi (Penskalaan)</h2>
+            
+            <div class="soal">
+                <p>6. Titik R(6, 9) didilatasikan dengan faktor skala 2 dan pusat dilatasi di (0,0). Tentukan koordinat bayangan titik R!</p>
+                <textarea placeholder="Tulis jawaban Anda di sini..."></textarea>
+                
+                <button class="btn no-print" onclick="toggleJawaban('jawaban6')">Tampilkan Pembahasan</button>
+                <div id="jawaban6" class="jawaban hidden">
+                    <p><strong>Pembahasan:</strong></p>
+                    <p>Dilatasi dengan pusat (0,0) dan skala k: (x,y) → (kx, ky)</p>
+                    <p>Jadi R'(2×6, 2×9) = R'(12, 18)</p>
+                </div>
+            </div>
+            
+            <div class="soal">
+                <p>7. Segitiga DEF dengan D(2,1), E(5,1), dan F(2,4) didilatasikan dengan faktor skala 3 dan pusat (2,1). Tentukan koordinat bayangan segitiga tersebut!</p>
+                <textarea placeholder="Tulis jawaban Anda di sini..."></textarea>
+            </div>
+        </section>
+        
+        <section id="soal-aplikasi">
+            <h2>E. Soal Aplikasi</h2>
+            
+            <div class="soal">
+                <p>8. Sebuah titik P(4,2) ditransformasikan dengan urutan berikut:</p>
+                <ol type="a">
+                    <li>Ditranslasikan oleh T(1, -3)</li>
+                    <li>Dicerminkan terhadap sumbu x</li>
+                    <li>Dirotasikan 90° searah jarum jam dengan pusat (0,0)</li>
+                </ol>
+                <p>Tentukan koordinat titik akhir setelah semua transformasi tersebut!</p>
+                <textarea placeholder="Tulis jawaban dan langkah penyelesaian Anda di sini..."></textarea>
+            </div>
+        </section>
+        
+        <div class="no-print" style="text-align: center; margin-top: 30px;">
+            <button class="btn" onclick="window.print()">Cetak LKS</button>
+            <button class="btn" onclick="tampilkanSemuaJawaban()">Tampilkan Semua Pembahasan</button>
+            <button class="btn" onclick="sembunyikanSemuaJawaban()">Sembunyikan Semua Pembahasan</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Lembar Kerja Siswa Transformasi Geometri © 2023</p>
+        <p>Matematika Kelas 11 SMA</p>
+    </footer>
+
+    <script>
+        function toggleJawaban(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('hidden');
+        }
+        
+        function tampilkanSemuaJawaban() {
+            const semuaJawaban = document.querySelectorAll('.jawaban');
+            semuaJawaban.forEach(jawaban => {
+                jawaban.classList.remove('hidden');
+            });
+        }
+        
+        function sembunyikanSemuaJawaban() {
+            const semuaJawaban = document.querySelectorAll('.jawaban');
+            semuaJawaban.forEach(jawaban => {
+                jawaban.classList.add('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
