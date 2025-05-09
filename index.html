@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Pembelajaran Transformasi Geometri - Kelas 11 SMA</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .materi-section {
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .interactive {
+            background-color: #e8f4fc;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .gallery img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Media Pembelajaran Transformasi Geometri</h1>
+        <p>Materi Matematika Kelas 11 SMA</p>
+    </header>
+    
+    <div class="container">
+        <section id="pengantar">
+            <h2>Pengantar Transformasi Geometri</h2>
+            <p>Transformasi geometri adalah perubahan posisi atau ukuran dari suatu objek geometri. Dalam matematika, kita mempelajari beberapa jenis transformasi dasar yang dapat diaplikasikan pada bangun datar.</p>
+            
+            <div class="card">
+                <h3>Tujuan Pembelajaran</h3>
+                <ul>
+                    <li>Memahami konsep dasar transformasi geometri</li>
+                    <li>Mengidentifikasi berbagai jenis transformasi</li>
+                    <li>Menerapkan transformasi pada objek geometri</li>
+                    <li>Menyelesaikan masalah terkait transformasi</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="materi" class="materi-section">
+            <h2>Jenis-Jenis Transformasi Geometri</h2>
+            
+            <div class="card">
+                <h3>1. Translasi (Pergeseran)</h3>
+                <p>Translasi adalah transformasi yang memindahkan semua titik pada bidang dengan jarak dan arah tertentu.</p>
+                <p><strong>Rumus:</strong> Jika titik A(x,y) ditranslasikan oleh T(a,b), maka A'(x+a, y+b)</p>
+                <div class="gallery">
+                    <img src="https://i.imgur.com/JQ1Z1yO.png" alt="Contoh Translasi">
+                    <img src="https://i.imgur.com/pLm3W9k.png" alt="Diagram Translasi">
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>2. Refleksi (Pencerminan)</h3>
+                <p>Refleksi adalah transformasi yang memindahkan titik-titik dengan menggunakan sifat pencerminan.</p>
+                <p><strong>Contoh sumbu refleksi:</strong> Sumbu x, sumbu y, garis y = x, garis y = -x, dll.</p>
+                <div class="interactive">
+                    <h4>Simulator Refleksi</h4>
+                    <p>Coba refleksikan titik terhadap berbagai sumbu:</p>
+                    <a href="#" class="btn">Refleksi terhadap Sumbu X</a>
+                    <a href="#" class="btn">Refleksi terhadap Sumbu Y</a>
+                    <a href="#" class="btn">Refleksi terhadap Garis y = x</a>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>3. Rotasi (Perputaran)</h3>
+                <p>Rotasi adalah transformasi yang memutar titik-titik pada bidang dengan pusat dan sudut tertentu.</p>
+                <p><strong>Rumus umum:</strong> Rotasi dengan pusat (a,b) sebesar θ derajat</p>
+                <p>x' = a + (x-a)cosθ - (y-b)sinθ</p>
+                <p>y' = b + (x-a)sinθ + (y-b)cosθ</p>
+            </div>
+            
+            <div class="card">
+                <h3>4. Dilatasi (Penskalaan)</h3>
+                <p>Dilatasi adalah transformasi yang mengubah ukuran suatu bangun dengan faktor skala tertentu.</p>
+                <p><strong>Rumus:</strong> Jika titik A(x,y) didilatasikan dengan pusat (a,b) dan faktor skala k, maka A'(a + k(x-a), b + k(y-b))</p>
+            </div>
+        </section>
+        
+        <section id="contoh-soal">
+            <h2>Contoh Soal dan Pembahasan</h2>
+            
+            <div class="card">
+                <h3>Contoh 1: Translasi</h3>
+                <p>Jika titik A(2,3) ditranslasikan oleh T(4,-1), tentukan koordinat bayangan A'!</p>
+                <p><strong>Pembahasan:</strong></p>
+                <p>A'(x', y') = (2+4, 3+(-1)) = (6, 2)</p>
+            </div>
+            
+            <div class="card">
+                <h3>Contoh 2: Refleksi</h3>
+                <p>Tentukan bayangan titik B(5,-2) jika dicerminkan terhadap garis y = x!</p>
+                <p><strong>Pembahasan:</strong></p>
+                <p>Refleksi terhadap y = x: (x,y) → (y,x)</p>
+                <p>Jadi B'( -2, 5 )</p>
+            </div>
+            
+            <div class="interactive">
+                <h3>Latihan Interaktif</h3>
+                <p>Coba kerjakan soal berikut:</p>
+                <p>"Titik C(3,7) dirotasikan 90° berlawanan jarum jam dengan pusat (0,0). Tentukan koordinat bayangannya!"</p>
+                <a href="#" class="btn">Tampilkan Jawaban</a>
+                <div id="jawaban" style="display:none; margin-top:10px;">
+                    <p>Rotasi 90°: (x,y) → (-y,x)</p>
+                    <p>Jadi C'( -7, 3 )</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="sumber-belajar">
+            <h2>Sumber Belajar Tambahan</h2>
+            <ul>
+                <li><a href="#">Video Pembelajaran Transformasi Geometri</a></li>
+                <li><a href="#">Simulasi Geogebra Transformasi</a></li>
+                <li><a href="#">Lembar Kerja Siswa</a></li>
+                <li><a href="#">Kuis Online</a></li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <p>Media Pembelajaran Matematika Kelas 11 SMA © 2023</p>
+        <p>Dibuat untuk memenuhi tugas project based learning</p>
+    </footer>
+
+    <script>
+        // Script sederhana untuk interaktivitas
+        document.querySelector('.btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const jawaban = document.getElementById('jawaban');
+            if(jawaban.style.display === 'none') {
+                jawaban.style.display = 'block';
+                this.textContent = 'Sembunyikan Jawaban';
+            } else {
+                jawaban.style.display = 'none';
+                this.textContent = 'Tampilkan Jawaban';
+            }
+        });
+    </script>
+</body>
+</html>
