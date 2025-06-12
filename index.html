@@ -133,15 +133,559 @@
             
             <div class="card">
                 <h3>1. Translasi (Pergeseran)</h3>
-                <p>Translasi adalah transformasi yang memindahkan semua titik pada bidang dengan jarak dan arah tertentu.</p>
-                <p><strong>Rumus:</strong> Jika titik A(x,y) ditranslasikan oleh T(a,b), maka A'(x+a, y+b)</p>
-                <div class="gallery">
-                    <img src="https://i.imgur.com/JQ1Z1yO.png" alt="Contoh Translasi">
-                    <img src="https://i.imgur.com/pLm3W9k.png" alt="Diagram Translasi">
-                </div>
+        <p>Translasi adalah transformasi geometri yang memindahkan setiap titik pada bidang dengan jarak dan arah tertentu tanpa mengubah bentuk dan ukuran bangun. Translasi disebut juga pergeseran.</p>
+        <p>Jika suatu titik A(x,y) ditranslasikan oleh T = 
+            <div class="matrix">
+                <table>
+                    <tr><td>a</td></tr>
+                    <tr><td>b</td></tr>
+                </table>
             </div>
-            
-            <div class="card">
+        menghasilkan bayangan A' = 
+            <div class="matrix">
+                <table>
+                    <tr><td>x'</td></tr>
+                    <tr><td>y'</td></tr>
+                </table>
+            </div>
+        ditulis menjadi bentuk persamaan matrik translasi:
+        </p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr><td>a</td></tr>
+                <tr><td>b</td></tr>
+            </table>
+        </div>
+        
+        <ul>
+            <li><strong>a</strong>: jumlah pergeseran secara horizontal</li>
+            <li><strong>b</strong>: jumlah pergeseran secara vertical</li>
+            <li><strong>(x,y)</strong>: titik asal</li>
+        </ul>
+    </div>
+    
+    <h2>Contoh Soal</h2>
+    
+    <div class="example">
+        <div class="example-title">Contoh soal 1:</div>
+        <p>Jika titik A(2,3) ditranslasikan oleh T(-3,4) maka bayangan titik A adalah</p>
+        
+        <div class="example-title">Pembahasan:</div>
+        <p>Pada soal diketahui koordinat titik A(2,3) artinya x = 2 dan y = 3 akan ditranslasikan oleh T(-3,4) artinya a = -3 dan b = 4 sehingga dapat dituliskan</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr><td>a</td></tr>
+                <tr><td>b</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>2</td></tr>
+                <tr><td>3</td></tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr><td>-3</td></tr>
+                <tr><td>4</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>2 + (-3)</td></tr>
+                <tr><td>3 + 4</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>-1</td></tr>
+                <tr><td>7</td></tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="example">
+        <div class="example-title">Contoh soal 2:</div>
+        <p>Tentukan persamaan bayangan garis 3x + 5y - 7 = 0 oleh T = 
+            <div class="matrix" style="display: inline-block;">
+                <table>
+                    <tr><td>2</td></tr>
+                    <tr><td>-1</td></tr>
+                </table>
+            </div>
+        </p>
+        
+        <div class="example-title">Pembahasan:</div>
+        <p>Pada soal diketahui persamaan garis 3x + 5y - 7 = 0 akan ditranslasikan oleh T = 
+            <div class="matrix" style="display: inline-block;">
+                <table>
+                    <tr><td>2</td></tr>
+                    <tr><td>-1</td></tr>
+                </table>
+            </div>, artinya a = 2 dan b = -1
+        </p>
+        
+        <p>Misalkan titik A(x,y) memenuhi persamaan 3x + 5y - 7 = 0 sehingga</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr><td>2</td></tr>
+                <tr><td>-1</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>x + 2</td></tr>
+                <tr><td>y - 1</td></tr>
+            </table>
+        </div>
+        
+        <p>Berdasarkan kesamaan kedua matrik diperoleh</p>
+        <p>x' = x + 2 → x = x' - 2</p>
+        <p>y' = y - 1 → y = y' + 1</p>
+        
+        <p>Substitusi x = x' - 2 dan y = y' + 1 ke persamaan garis 3x + 5y - 7 = 0</p>
+        <p>3(x' - 2) + 5(y' + 1) - 7 = 0</p>
+        <p>3x' - 6 + 5y' + 5 - 7 = 0</p>
+        <p>3x' + 5y' - 8 = 0</p>
+        
+        <p>Jadi, persamaan bayangan garis adalah 3x' + 5y' - 8 = 0</p>
+    </div>
+    
+    <h2>Latihan Soal</h2>
+    
+    <div class="exercise">
+        <div class="example-title">Latihan soal 1:</div>
+        <p>Tentukan hasil bayangan titik A(3,5) oleh translasi T = 
+            <div class="matrix" style="display: inline-block;">
+                <table>
+                    <tr><td>-2</td></tr>
+                    <tr><td>4</td></tr>
+                </table>
+            </div>
+        </p>
+        
+        <div class="example-title">Penjelasan:</div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr><td>-2</td></tr>
+                <tr><td>4</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>3</td></tr>
+                <tr><td>5</td></tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr><td>-2</td></tr>
+                <tr><td>4</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>3 + (-2)</td></tr>
+                <tr><td>5 + 4</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>1</td></tr>
+                <tr><td>9</td></tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <div class="example-title">Latihan soal 2:</div>
+        <p>Diketahui titik P'(4, -12) adalah bayangan titik P oleh translasi T = 
+            <div class="matrix" style="display: inline-block;">
+                <table>
+                    <tr><td>-9</td></tr>
+                    <tr><td>8</td></tr>
+                </table>
+            </div>. Koordinat titik P adalah
+        </p>
+        
+        <div class="example-title">Penjelasan:</div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr><td>-9</td></tr>
+                <tr><td>8</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>4</td></tr>
+                <tr><td>-12</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr><td>-9</td></tr>
+                <tr><td>8</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>4</td></tr>
+                <tr><td>-12</td></tr>
+            </table>
+            <span>-</span>
+            <table>
+                <tr><td>-9</td></tr>
+                <tr><td>8</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>4 + 9</td></tr>
+                <tr><td>-12 - 8</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>13</td></tr>
+                <tr><td>-20</td></tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <div class="example-title">Latihan soal 3:</div>
+        <p>Titik A ditranslasikan oleh T = 
+            <div class="matrix" style="display: inline-block;">
+                <table>
+                    <tr><td>6</td></tr>
+                    <tr><td>-3</td></tr>
+                </table>
+            </div>
+        menghasilkan titik A'(4, -2). Koordinat titik A adalah</p>
+        
+        <div class="example-title">Penjelasan:</div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr><td>6</td></tr>
+                <tr><td>-3</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>4</td></tr>
+                <tr><td>-2</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr><td>6</td></tr>
+                <tr><td>-3</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>4</td></tr>
+                <tr><td>-2</td></tr>
+            </table>
+            <span>-</span>
+            <table>
+                <tr><td>6</td></tr>
+                <tr><td>-3</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>4 - 6</td></tr>
+                <tr><td>-2 + 3</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>-2</td></tr>
+                <tr><td>1</td></tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="exercise">
+        <div class="example-title">Latihan soal 4:</div>
+        <p>Diketahui garis l: 4x - y + 2 = 0 ditranslasikan oleh T = 
+            <div class="matrix" style="display: inline-block;">
+                <table>
+                    <tr><td>-2</td></tr>
+                    <tr><td>1</td></tr>
+                </table>
+            </div>. Maka bayangan garis l' adalah
+        </p>
+        
+        <div class="example-title">Pembahasan:</div>
+        <p>Diketahui persamaan garis 4x - y + 2 = 0 akan ditranslasikan oleh T = 
+            <div class="matrix" style="display: inline-block;">
+                <table>
+                    <tr><td>-2</td></tr>
+                    <tr><td>1</td></tr>
+                </table>
+            </div>, artinya a = -2 dan b = 1
+        </p>
+        
+        <p>Misalkan titik A(x,y) memenuhi persamaan 4x - y + 2 = 0 sehingga</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr><td>-2</td></tr>
+                <tr><td>1</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>x - 2</td></tr>
+                <tr><td>y + 1</td></tr>
+            </table>
+        </div>
+        
+        <p>Berdasarkan kesamaan kedua matrik diperoleh</p>
+        <p>x' = x - 2 → x = x' + 2</p>
+        <p>y' = y + 1 → y = y' - 1</p>
+        
+        <p>Substitusi x = x' + 2 dan y = y' - 1 ke persamaan garis 4x - y + 2 = 0</p>
+        <p>4(x' + 2) - (y' - 1) + 2 = 0</p>
+        <p>4x' + 8 - y' + 1 + 2 = 0</p>
+        <p>4x' - y' + 11 = 0</p>
+        
+        <p>Jadi, persamaan bayangan garis adalah 4x' - y' + 11 = 0</p>
+    </div>
+    
+    <div class="exercise">
+        <div class="example-title">Latihan soal 5:</div>
+        <p>Tentukan persamaan bayangan l: 2x - 3y + 12 = 0 jika ditranslasikan oleh T = 
+            <div class="matrix" style="display: inline-block;">
+                <table>
+                    <tr><td>1</td></tr>
+                    <tr><td>-2</td></tr>
+                </table>
+            </div>
+        </p>
+        
+        <div class="example-title">Pembahasan:</div>
+        <p>Diketahui persamaan garis 2x - 3y + 12 = 0 akan ditranslasikan oleh T = 
+            <div class="matrix" style="display: inline-block;">
+                <table>
+                    <tr><td>1</td></tr>
+                    <tr><td>-2</td></tr>
+                </table>
+            </div>, artinya a = 1 dan b = -2
+        </p>
+        
+        <p>Misalkan titik A(x,y) memenuhi persamaan 2x - 3y + 12 = 0 sehingga</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr><td>1</td></tr>
+                <tr><td>-2</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>x + 1</td></tr>
+                <tr><td>y - 2</td></tr>
+            </table>
+        </div>
+        
+        <p>Berdasarkan kesamaan kedua matrik diperoleh</p>
+        <p>x' = x + 1 → x = x' - 1</p>
+        <p>y' = y - 2 → y = y' + 2</p>
+        
+        <p>Substitusi x = x' - 1 dan y = y' + 2 ke persamaan garis 2x - 3y + 12 = 0</p>
+        <p>2(x' - 1) - 3(y' + 2) + 12 = 0</p>
+        <p>2x' - 2 - 3y' - 6 + 12 = 0</p>
+        <p>2x' - 3y' + 4 = 0</p>
+        
+        <p>Jadi, persamaan bayangan garis adalah 2x' - 3y' + 4 = 0</p>
+    </div>
                 <h3>2. Refleksi (Pencerminan)</h3>
                 <h2>Pengertian dan Sifat-sifat Refleksi (Pencerminan)</h2>
     
