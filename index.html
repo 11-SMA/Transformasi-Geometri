@@ -286,13 +286,19 @@
             <!-- Refleksi Section -->
             <div class="card">
                 <h3>2. Refleksi (Pencerminan)</h3>
-                <p>Refleksi adalah transformasi yang memindahkan tiap titik pada bidang dengan menggunakan sifat bayangan cermin.</p>
+                <p>Refleksi adalah suatu transformasi yang memindahkan tiap titik pada bidang dengan menggunakan sifat bayangan oleh suatu cermin. Refleksi disimbolkan dengan 𝑀𝑎 dengan 𝑎 merupakan sumbu cermin. Untuk lebih memahami apa itu Refleksi, coba simak ilustrasi berikut:</p>
+
+                <div class="picture">
+                    <img src="Picture1.jpg" alt="Contoh Dilatasi" width="500">
+                </div>
+
+                <p>jika kita lihat pada cermin hasil bayangan Rani berupa sosok Rani dengan tinggi yang sama dan jarak bayangan Rani terhadap cermin sama dengan jarak Rani terhadap cermin yaitu 50 cm. Jika kita misalkan tinggi Rani sebagai garis ℎ maka hasil refleksi berupa garis ℎ′. Jika ujung-ujung garis ℎ dan garis ℎ′ dihubungkan maka akan menghasilkan garis yang sejajar.</p>
                 
                 <h4>Sifat-sifat Refleksi:</h4>
                 <ol>
-                    <li>Jarak titik asal ke cermin = jarak cermin ke titik bayangan</li>
-                    <li>Garis penghubung titik asal dan bayangan tegak lurus terhadap cermin</li>
-                    <li>Garis-garis yang terbentuk antara titik asal dan bayangan sejajar</li>
+                    <li>Jarak dari titik asal ke cermin sama dengan jarak cermin ke titik bayangan.</li>
+                    <li>Garis yang menghubungkan titik asal dengan titik bayangan tegak lurus terhadap cermin.</li>
+                    <li>3.	Garis-garis yang terbentuk antara titik-titik asal dengan titik-titik bayangan akan saling sejajar.</li>
                 </ol>
                 
                 <h4>Jenis-jenis Refleksi</h4>
@@ -301,7 +307,7 @@
                         <tr>
                             <th>Refleksi</th>
                             <th>Titik Bayangan</th>
-                            <th>Matriks Transformasi</th>
+                            <th>Persamaan Matriks Transformasi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -309,7 +315,16 @@
                             <td>Sumbu X</td>
                             <td>A'(x, -y)</td>
                             <td>
-                                <div class="matrix-container small-matrix">
+                                <div class="matrix-container">
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">x'</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">y'</div>
+                                        </div>
+                                    </div>
+                                    <span class="operator">=</span>
                                     <div class="matrix">
                                         <div class="matrix-row">
                                             <div class="matrix-cell">1</div>
@@ -318,6 +333,15 @@
                                         <div class="matrix-row">
                                             <div class="matrix-cell">0</div>
                                             <div class="matrix-cell">-1</div>
+                                        </div>
+                                    </div>
+                                    <span class="operator">×</span>
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">x</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">y</div>
                                         </div>
                                     </div>
                                 </div>
@@ -354,6 +378,24 @@
                                         <div class="matrix-row">
                                             <div class="matrix-cell">0</div>
                                             <div class="matrix-cell">-1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Garis y=x</td>
+                            <td>A'(y,x)</td>
+                            <td>
+                                <div class="matrix-container small-matrix">
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">1</div>
+                                            <div class="matrix-cell">0</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">0</div>
+                                            <div class="matrix-cell">1</div>
                                         </div>
                                     </div>
                                 </div>
@@ -460,11 +502,13 @@
             <!-- Dilatasi Section -->
             <div class="card">
                 <h3>4. Dilatasi (Penskalaan)</h3>
-                <p>Dilatasi adalah transformasi yang mengubah jarak titik-titik dengan faktor pengali tertentu terhadap suatu titik tertentu.</p>
-                
+                <p>Dilatasi adalah transformasi yang mengubah jarak titik-titik dengan faktor pengali tertentu terhadap suatu titik tertentu. Faktor pengali tertentu disebut faktor dilatasi atau faktor skala dan titik tertentu disebut pusat dilatasi. Untuk lebih memahami apa itu dilatasi, coba amati gambar 17 berikut :</p>
+        
                 <div class="picture">
                     <img src="Picture1.jpg" alt="Contoh Dilatasi" width="500">
                 </div>
+
+                <p>Jika kita amati segitiga ABC pada gambar 17, segitiga ABC akan semakin besar dengan perkalian skala 3. Kemudian, jarak 𝑂𝐴′ adalah tiga kali jarak 𝑂𝐴, jarak 𝑂𝐵′ adalah tiga kali jarak 𝑂𝐵, jarak 𝑂𝐶′ adalah tiga kali jarak 𝑂𝐶. Tetapi ketika segitiga ABC  dikalikan dengan faktor skala −1 menghasilkan besar dan ukuran yang sama, tetapi mempunyai arah yang berlawanan. Perhatikan juga jarak 𝑂𝐴′′ sama dengan jarak 𝑂𝐴, jarak 𝑂𝐵′′ sama dengan jarak 𝑂𝐵, dan jarak 𝑂𝐶′′ sama dengan jarak 𝑂𝐶.</p>
                 
                 <h4>Persamaan Matriks Transformasi</h4>
                 <h5>Dilatasi dengan Pusat (0,0)</h5>
