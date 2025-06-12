@@ -165,7 +165,189 @@
             <div class="card">
                 <h3>4. Dilatasi (Penskalaan)</h3>
                 <p>Dilatasi adalah transformasi yang mengubah jarak titik-titik dengan faktor pengali tertentu terhadap suatu titik tertentu. Faktor pengali tertentu disebut faktor dilatasi atau faktor skala dan titik tertentu disebut pusat dilatasi.</p>
+                <p>Jika kita amati segitiga ABC pada gambar 17, segitiga ABC akan semakin besar dengan perkalian skala 3. Kemudian, jarak 𝑂𝐴′ adalah tiga kali jarak 𝑂𝐴, jarak 𝑂𝐵′ adalah tiga kali jarak 𝑂𝐵, jarak 𝑂𝐶′ adalah tiga kali jarak 𝑂𝐶. Tetapi ketika segitiga ABC dikalikan dengan faktor skala −1 menghasilkan besar dan ukuran yang sama, tetapi mempunyai arah yang berlawanan. Perhatikan juga jarak 𝑂𝐴′′ sama dengan jarak 𝑂𝐴, jarak 𝑂𝐵′′ sama dengan jarak 𝑂𝐵, dan jarak 𝑂𝐶′′ sama dengan jarak 𝑂𝐶.</p>
                 <p><strong>Rumus:</strong> Jika titik A(x,y) didilatasikan dengan pusat (a,b) dan faktor skala k, maka A'(a + k(x-a), b + k(y-b))</p>
+                <div class="formula">
+        <h2>Persamaan Matriks Transformasi</h2>
+        <p>Misalkan koordinat titik asal A(𝑥, 𝑦) akan didilatasikan dengan faktor skala terhadap pusat (0, 0) dan pusat (𝑎, 𝑏) akan menghasilkan bayangan sebagai berikut:</p>
+        
+        <h3>Titik Pusat (0,0)</h3>
+        <p>\[
+        \begin{pmatrix}
+            x' \\
+            y'
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            k & 0 \\
+            0 & k
+        \end{pmatrix}
+        \begin{pmatrix}
+            x \\
+            y
+        \end{pmatrix}
+        \]</p>
+        
+        <h3>Titik Pusat (a,b)</h3>
+        <p>\[
+        \begin{pmatrix}
+            x' \\
+            y'
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            k & 0 \\
+            0 & k
+        \end{pmatrix}
+        \left( \begin{matrix}
+            x \\
+            y
+        \end{matrix} - \begin{matrix}
+            a \\
+            b
+        \end{matrix} \right) + 
+        \begin{pmatrix}
+            a \\
+            b
+        \end{pmatrix}
+        \]</p>
+    </div>
+    
+    <div class="example">
+        <h2>Contoh Soal</h2>
+        <p>Tentukan bayangan titik 𝐴(−5, 2) setelah didilatasikan terhadap pusat (3, 4) dan faktor skala −3!</p>
+        
+        <h3>Pembahasan:</h3>
+        <p>Titik A (-5,2) akan didilatasikan oleh D~((3,4),-3)~ dapat ditulis</p>
+        <p>\[
+        A(-5, 2) \xrightarrow{D((3,4), -3)} A'(X', Y')
+        \]</p>
+        <p>\[
+        \begin{pmatrix}
+            x' \\
+            y'
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            -3 & 0 \\
+            0 & -3
+        \end{pmatrix}
+        \left( \begin{matrix}
+            -5 \\
+            2
+        \end{matrix} - \begin{matrix}
+            3 \\
+            4
+        \end{matrix} \right) + 
+        \begin{pmatrix}
+            3 \\
+            4
+        \end{pmatrix}
+        \]</p>
+        <p>\[
+        \begin{pmatrix}
+            x' \\
+            y'
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            -3 & 0 \\
+            0 & -3
+        \end{pmatrix}
+        \begin{pmatrix}
+            -8 \\
+            -2
+        \end{pmatrix} + 
+        \begin{pmatrix}
+            3 \\
+            4
+        \end{pmatrix}
+        \]</p>
+        <p>\[
+        \begin{pmatrix}
+            x' \\
+            y'
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            24 \\
+            6
+        \end{pmatrix} + 
+        \begin{pmatrix}
+            3 \\
+            4
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            27 \\
+            10
+        \end{pmatrix}
+        \]</p>
+    </div>
+    
+    <div class="exercise">
+        <h2>Soal Latihan</h2>
+        
+        <h3>1. Titik 𝐴(−2, −5) didilatasikan dengan faktor skala −2 terhadap titik pusat (0, 0). Tentukan hasil dilatasi pada titik A!</h3>
+        
+        <h4>Pembahasan:</h4>
+        <p>Titik A (-2,-5) didilatasikan oleh D~(0,-2)~</p>
+        <p>\[
+        \begin{pmatrix}
+            x' \\
+            y'
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            -2 & 0 \\
+            0 & -2
+        \end{pmatrix}
+        \begin{pmatrix}
+            -2 \\
+            -5
+        \end{pmatrix}
+        \]</p>
+        <p>\[
+        \begin{pmatrix}
+            x' \\
+            y'
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            4 \\
+            10
+        \end{pmatrix}
+        \]</p>
+        
+        <h3>2. Titik 𝐵 didilatasikan dengan faktor skala −2 terhadap titik pusat (0, 0) menghasilkan titik 𝐵′(−4, 6). Koordinat titik 𝐵 adalah?</h3>
+        
+        <h4>Pembahasan:</h4>
+        <p>Titik B didilatasikan dengan faktor skala -2 terhadap titik pusat (0,0) menghasilkan titik B′ (−4, 6).</p>
+        <p>\[
+        \begin{pmatrix}
+            -4 \\
+            6
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            -2 & 0 \\
+            0 & -2
+        \end{pmatrix}
+        \begin{pmatrix}
+            x \\
+            y
+        \end{pmatrix}
+        \]</p>
+        <p>\[
+        \begin{pmatrix}
+            -4 \\
+            6
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            -2x \\
+            -2y
+        \end{pmatrix}
+        \]</p>
+        <p>Dengan kesamaan dua matriks diperoleh:</p>
+        <p>\[
+        -4 = -2x \quad \Rightarrow \quad x = 2
+        \]</p>
+        <p>\[
+        6 = -2y \quad \Rightarrow \quad y = -3
+        \]</p>
+        <p>Jadi, koordinat titik B adalah B(2, -3)</p>
+    </div>
                 <div class="gallery">
                     <img src="https://i.imgur.com/JQ1Z1yO.png" alt="Contoh Dilatasi">
                     <img src="https://i.imgur.com/pLm3W9k.png" alt="Diagram Translasi">
