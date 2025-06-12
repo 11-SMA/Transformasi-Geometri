@@ -156,13 +156,574 @@
             
             <div class="card">
                 <h3>3. Rotasi (Perputaran)</h3>
-                <p>Rotasi adalah transformasi yang memutar titik-titik pada bidang dengan pusat dan sudut tertentu.</p>
-                <p><strong>Rumus umum:</strong> Rotasi dengan pusat (a,b) sebesar θ derajat</p>
-                <p>x' = a + (x-a)cosθ - (y-b)sinθ</p>
-                <p>y' = b + (x-a)sinθ + (y-b)cosθ</p>
-            </div>
-            
-            <div class="card">
+                <p>Rotasi adalah transformasi yang memindahkan titik-titik dengan cara memutar titik-titik tersebut sejauh α terhadap suatu titik tertentu.</p>
+    
+    <p>Rotasi pada bidang datar ditentukan oleh:</p>
+    <ol>
+        <li>Titik pusat rotasi</li>
+        <li>Besar sudut rotasi</li>
+        <li>Arah sudut rotasi</li>
+    </ol>
+    
+    <p>Sudut rotasi merupakan sudut antara garis yang menghubungkan titik asal dan pusat rotasi yang menghubungkan titik bayangan dan pusat rotasi. Jika arah rotasi diputar searah jarum jam maka besar sudut rotasi negatif (-α) jika arah rotasi diputar berlawanan jarum jam maka besar sudut rotasi positif (α). Rotasi dinotasikan dengan R (P,α) dimana p merupakan pusat rotasi dan α besar sudut rotasi.</p>
+    
+    <h2>Rotasi terhadap titik pusat (0, 0)</h2>
+    
+    <img src="media/image1.png" alt="Diagram rotasi terhadap titik pusat (0,0)" width="373">
+    
+    <p>Misalkan terdapat sebuah titik A (x, y) akan dirotasikan sebesar α dengan pusat (a, b) dan menghasilkan titik A'(x', y') dapat dituliskan sebagai berikut:</p>
+    
+    <p>A (x, y) <span style="font-size: larger;">→</span> A'(x', y')</p>
+    
+    <p>Titik (x, y) dirotasikan sebesar α terhadap titik pusat (0, 0) menghasilkan bayangan titik (x', y') dengan aturan</p>
+    
+    <div class="matrix">
+        <table>
+            <tr>
+                <td>x'</td>
+            </tr>
+            <tr>
+                <td>y'</td>
+            </tr>
+        </table>
+        <span>=</span>
+        <table>
+            <tr>
+                <td>cosα</td>
+                <td>-sinα</td>
+            </tr>
+            <tr>
+                <td>sinα</td>
+                <td>cosα</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>y</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="example">
+        <div class="example-title">Contoh soal 1:</div>
+        <p>Tentukan bayangan titik C (3, 1) jika dirotasikan berlawanan arah jarum jam sebesar 90° dan berpusat (0, 0)!</p>
+        
+        <div class="example-title">Pembahasan:</div>
+        <p>Koordinat titik C (3, 1) akan dirotasikan R[(0, 0), 90°]</p>
+        
+        <p>C (3, 1) <span style="font-size: larger;">→</span> C'(x', y')</p>
+        
+        <div class="matrix">
+            <table>
+                <tr>
+                    <td>x'</td>
+                </tr>
+                <tr>
+                    <td>y'</td>
+                </tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr>
+                    <td>cos90°</td>
+                    <td>-sin90°</td>
+                </tr>
+                <tr>
+                    <td>sin90°</td>
+                    <td>cos90°</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr>
+                    <td>x'</td>
+                </tr>
+                <tr>
+                    <td>y'</td>
+                </tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr>
+                    <td>0</td>
+                    <td>-1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr>
+                    <td>x'</td>
+                </tr>
+                <tr>
+                    <td>y'</td>
+                </tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr>
+                    <td>-1</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                </tr>
+            </table>
+        </div>
+        
+        <p>Jadi, hasil bayangan titik C adalah C'(-1, 3)</p>
+    </div>
+    
+    <div class="example">
+        <div class="example-title">Contoh soal 2:</div>
+        <p>Garis 3x - 4y + 12 = 0 dirotasikan sebesar 180° terhadap titik pusat (0, 0). Persamaan garis hasil rotasi adalah ...</p>
+        
+        <div class="example-title">Pembahasan:</div>
+        <p>Misalkan titik A (x, y) <span style="font-size: larger;">→</span> A'(x', y')</p>
+        
+        <div class="matrix">
+            <table>
+                <tr>
+                    <td>x'</td>
+                </tr>
+                <tr>
+                    <td>y'</td>
+                </tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr>
+                    <td>cos180°</td>
+                    <td>-sin180°</td>
+                </tr>
+                <tr>
+                    <td>sin180°</td>
+                    <td>cos180°</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>y</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr>
+                    <td>x'</td>
+                </tr>
+                <tr>
+                    <td>y'</td>
+                </tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr>
+                    <td>-1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>-1</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>y</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr>
+                    <td>x'</td>
+                </tr>
+                <tr>
+                    <td>y'</td>
+                </tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr>
+                    <td>-x</td>
+                </tr>
+                <tr>
+                    <td>-y</td>
+                </tr>
+            </table>
+        </div>
+        
+        <p>Berdasarkan persamaan dua matriks diperoleh</p>
+        <p>x' = -x → x = -x'</p>
+        <p>y' = -y → y = -y'</p>
+        
+        <p>Substitusi x = -x' dan y' = -y ke persamaan 3x - 4y + 12 = 0 diperoleh</p>
+        <p>3 (-x') - 4 (-y') + 12 = 0</p>
+        <p>-3x' + 4y' + 12 = 0</p>
+        <p>-3x + 4y + 12 = 0</p>
+        
+        <p>Jadi, persamaan garis hasil rotasi adalah -3x + 4y + 12 = 0</p>
+    </div>
+    
+    <h2>Rotasi terhadap titik pusat (a, b)</h2>
+    
+    <img src="media/image2.png" alt="Diagram rotasi terhadap titik pusat (a,b)" width="279">
+    
+    <p>Misalkan terdapat sebuah titik A (x, y) akan dirotasikan sebesar α dengan pusat (a, b) dan menghasilkan titik A'(x', y') dapat dituliskan sebagai berikut:</p>
+    
+    <p>A (x, y) <span style="font-size: larger;">→</span> A'(x', y')</p>
+    
+    <p>Titik (x, y) dirotasikan sebesar α terhadap titik pusat (a, b) menghasilkan bayangan titik (x', y') dengan aturan</p>
+    
+    <div class="matrix">
+        <table>
+            <tr>
+                <td>x'</td>
+            </tr>
+            <tr>
+                <td>y'</td>
+            </tr>
+        </table>
+        <span>=</span>
+        <table>
+            <tr>
+                <td>cosα</td>
+                <td>-sinα</td>
+            </tr>
+            <tr>
+                <td>sinα</td>
+                <td>cosα</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>x - a</td>
+            </tr>
+            <tr>
+                <td>y - b</td>
+            </tr>
+        </table>
+        <span>+</span>
+        <table>
+            <tr>
+                <td>a</td>
+            </tr>
+            <tr>
+                <td>b</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="example">
+        <div class="example-title">Contoh soal 1:</div>
+        <p>Tentukan bayangan titik C (3, 1) jika dirotasikan berlawanan arah jarum jam sebesar 90° dan berpusat (2, 4)!</p>
+        
+        <div class="example-title">Pembahasan:</div>
+        <p>Koordinat titik C (3, 1) akan dirotasikan R[(2, 4), 90°]</p>
+        
+        <p>C (3, 1) <span style="font-size: larger;">→</span> C'(x', y')</p>
+        
+        <div class="matrix">
+            <table>
+                <tr>
+                    <td>x'</td>
+                </tr>
+                <tr>
+                    <td>y'</td>
+                </tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr>
+                    <td>cos90°</td>
+                    <td>-sin90°</td>
+                </tr>
+                <tr>
+                    <td>sin90°</td>
+                    <td>cos90°</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>3 - 2</td>
+                </tr>
+                <tr>
+                    <td>1 - 4</td>
+                </tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr>
+                    <td>x'</td>
+                </tr>
+                <tr>
+                    <td>y'</td>
+                </tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr>
+                    <td>0</td>
+                    <td>-1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>-3</td>
+                </tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr>
+                    <td>x'</td>
+                </tr>
+                <tr>
+                    <td>y'</td>
+                </tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                </tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr>
+                    <td>x'</td>
+                </tr>
+                <tr>
+                    <td>y'</td>
+                </tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                </tr>
+            </table>
+        </div>
+        
+        <p>Jadi, hasil bayangan titik C adalah C'(5, 5)</p>
+    </div>
+    
+    <div class="example">
+        <div class="example-title">Contoh soal 2:</div>
+        <p>Garis 3x - 4y + 12 = 0 dirotasikan sebesar 180° terhadap titik pusat (1, 2). Persamaan garis rotasi adalah ...</p>
+        
+        <div class="example-title">Pembahasan:</div>
+        <p>Misalkan titik A (x, y) memenuhi persamaan garis 3x - 4y + 12 = 0 sehingga</p>
+        <p>A (x, y) <span style="font-size: larger;">→</span> A'(x', y')</p>
+        
+        <div class="matrix">
+            <table>
+                <tr>
+                    <td>x'</td>
+                </tr>
+                <tr>
+                    <td>y'</td>
+                </tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr>
+                    <td>cos180°</td>
+                    <td>-sin180°</td>
+                </tr>
+                <tr>
+                    <td>sin180°</td>
+                    <td>cos180°</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>x - 1</td>
+                </tr>
+                <tr>
+                    <td>y - 2</td>
+                </tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr>
+                    <td>x'</td>
+                </tr>
+                <tr>
+                    <td>y'</td>
+                </tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr>
+                    <td>-1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>-1</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>x - 1</td>
+                </tr>
+                <tr>
+                    <td>y - 2</td>
+                </tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr>
+                    <td>x'</td>
+                </tr>
+                <tr>
+                    <td>y'</td>
+                </tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr>
+                    <td>-x + 1 + 1</td>
+                </tr>
+                <tr>
+                    <td>-y + 2 + 2</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr>
+                    <td>x'</td>
+                </tr>
+                <tr>
+                    <td>y'</td>
+                </tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr>
+                    <td>-x + 2</td>
+                </tr>
+                <tr>
+                    <td>-y + 4</td>
+                </tr>
+            </table>
+        </div>
+        
+        <p>Berdasarkan persamaan dua matriks diperoleh</p>
+        <p>x' = -x + 2 → x = 2 - x'</p>
+        <p>y' = -y + 4 → y = 4 - y'</p>
+        
+        <p>Substitusi x = 2 - x' dan y = 4 - y' ke persamaan garis 3x - 4y + 12 = 0 diperoleh</p>
+        <p>3 (2 - x') - 4 (4 - y') + 12 = 0</p>
+        <p>6 - 3x' - 16 + 4y' + 12 = 0</p>
+        <p>-3x' + 4y' + 6 - 16 + 12 = 0</p>
+        <p>-3x + 4y + 2 = 0</p>
+        
+        <p>Jadi, persamaan garis hasil rotasi adalah -3x + 4y + 2 = 0</p>
+    </div>
                 <h3>4. Dilatasi (Penskalaan)</h3>
                 <p>Dilatasi adalah transformasi yang mengubah jarak titik-titik dengan faktor pengali tertentu terhadap suatu titik tertentu. Faktor pengali tertentu disebut faktor dilatasi atau faktor skala dan titik tertentu disebut pusat dilatasi.</p>
                 <p>Jika kita amati segitiga ABC pada gambar 17, segitiga ABC akan semakin besar dengan perkalian skala 3. Kemudian, jarak 𝑂𝐴′ adalah tiga kali jarak 𝑂𝐴, jarak 𝑂𝐵′ adalah tiga kali jarak 𝑂𝐵, jarak 𝑂𝐶′ adalah tiga kali jarak 𝑂𝐶. Tetapi ketika segitiga ABC dikalikan dengan faktor skala −1 menghasilkan besar dan ukuran yang sama, tetapi mempunyai arah yang berlawanan. Perhatikan juga jarak 𝑂𝐴′′ sama dengan jarak 𝑂𝐴, jarak 𝑂𝐵′′ sama dengan jarak 𝑂𝐵, dan jarak 𝑂𝐶′′ sama dengan jarak 𝑂𝐶.</p>
