@@ -143,17 +143,503 @@
             
             <div class="card">
                 <h3>2. Refleksi (Pencerminan)</h3>
-                <p>Refleksi adalah transformasi yang memindahkan titik-titik dengan menggunakan sifat pencerminan.</p>
-                <p><strong>Contoh sumbu refleksi:</strong> Sumbu x, sumbu y, garis y = x, garis y = -x, dll.</p>
-                <div class="interactive">
-                    <h4>Simulator Refleksi</h4>
-                    <p>Coba refleksikan titik terhadap berbagai sumbu:</p>
-                    <a href="#" class="btn">Refleksi terhadap Sumbu X</a>
-                    <a href="#" class="btn">Refleksi terhadap Sumbu Y</a>
-                    <a href="#" class="btn">Refleksi terhadap Garis y = x</a>
-                </div>
-            </div>
-            
+                <h2>Pengertian dan Sifat-sifat Refleksi (Pencerminan)</h2>
+    
+    <p>Bercermin merupakan kegiatan yang sering kita lakukan dalam kehidupan sehari-hari. Pernahkan kalian berpikir bagaimana bentuk bayangan yang dihasilkan pada cermin? Bagaimana jarak bayangan yang dihasilkan terhadap cermin? Untuk menjawab pertanyaan tersebut, yuk kita simak ilustrasi 1.</p>
+    
+    <div class="example">
+        <div class="example-title">ILUSTRASI 1</div>
+        <p>Rani berdiri di depan cermin dengan jarak 50 cm dan tinggi Rani adalah 160 cm. Bagaimana hasil refleksi Rani terhadap cermin? Bagaimana jarak bayangan Rani terhadap cermin?</p>
+        
+        <img src="media/image1.png" alt="Rani berdiri dihadapan cermin" width="626">
+        <p style="text-align: center; font-style: italic;">Gambar: Rani berdiri dihadapan cermin</p>
+        <p style="text-align: center; font-style: italic;">Sumber: Modul Matematika Umum Kelas XI KD 3.5</p>
+        
+        <p>Jika kita lihat pada cermin hasil bayangan Rani berupa sosok Rani dengan tinggi yang sama dan jarak bayangan Rani terhadap cermin sama dengan jarak Rani terhadap cermin yaitu 50 cm. Jika kita misalkan tinggi Rani sebagai garis ℎ maka hasil refleksi berupa garis ℎ′. Jika ujung-ujung garis ℎ dan garis ℎ′ dihubungkan maka akan menghasilkan garis yang sejajar.</p>
+    </div>
+    
+    <p><strong>Refleksi (pencerminan)</strong> adalah suatu transformasi yang memindahkan tiap titik pada bidang dengan menggunakan sifat bayangan oleh suatu cermin. Refleksi disimbolkan dengan 𝑀<sub>𝑎</sub> dengan 𝑎 merupakan sumbu cermin.</p>
+    
+    <h3>Sifat-sifat Refleksi:</h3>
+    <ol>
+        <li>Jarak dari titik asal ke cermin sama dengan jarak cermin ke titik bayangan</li>
+        <li>Garis yang menghubungkan titik asal dengan titik bayangan tegak lurus terhadap cermin</li>
+        <li>Garis-garis yang terbentuk antara titik-titik asal dengan titik-titik bayangan akan saling sejajar</li>
+    </ol>
+    
+    <h2>Jenis-jenis refleksi</h2>
+    
+    <p>Misalkan koordinat titik asal A(𝑥,𝑦) akan direfleksikan tehadap sumbu X, sumbu Y, titik asal O (0,0), garis 𝑦 = 𝑥, garis 𝑦 = −𝑥, garis 𝑥 = ℎ, garis 𝑦 = 𝑘, dan garis 𝑦 = 𝑥tan𝛼 akan menghasilkan bayangan sebagai berikut:</p>
+    
+    <table class="reflection-types">
+        <thead>
+            <tr>
+                <th>Refleksi</th>
+                <th>Titik Bayangan</th>
+                <th>Persamaan Matriks Transformasi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sumbu X</td>
+                <td>A'(x, -y)</td>
+                <td>
+                    <div class="matrix">
+                        <table>
+                            <tr><td>x'</td></tr>
+                            <tr><td>y'</td></tr>
+                        </table>
+                        <span>=</span>
+                        <table>
+                            <tr><td>1</td><td>0</td></tr>
+                            <tr><td>0</td><td>-1</td></tr>
+                        </table>
+                        <table>
+                            <tr><td>x</td></tr>
+                            <tr><td>y</td></tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Sumbu Y</td>
+                <td>A'(-x, y)</td>
+                <td>
+                    <div class="matrix">
+                        <table>
+                            <tr><td>x'</td></tr>
+                            <tr><td>y'</td></tr>
+                        </table>
+                        <span>=</span>
+                        <table>
+                            <tr><td>-1</td><td>0</td></tr>
+                            <tr><td>0</td><td>1</td></tr>
+                        </table>
+                        <table>
+                            <tr><td>x</td></tr>
+                            <tr><td>y</td></tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Titik asal O (0,0)</td>
+                <td>A'(-x, -y)</td>
+                <td>
+                    <div class="matrix">
+                        <table>
+                            <tr><td>x'</td></tr>
+                            <tr><td>y'</td></tr>
+                        </table>
+                        <span>=</span>
+                        <table>
+                            <tr><td>-1</td><td>0</td></tr>
+                            <tr><td>0</td><td>-1</td></tr>
+                        </table>
+                        <table>
+                            <tr><td>x</td></tr>
+                            <tr><td>y</td></tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Garis 𝑦 = 𝑥</td>
+                <td>A'(y, x)</td>
+                <td>
+                    <div class="matrix">
+                        <table>
+                            <tr><td>x'</td></tr>
+                            <tr><td>y'</td></tr>
+                        </table>
+                        <span>=</span>
+                        <table>
+                            <tr><td>0</td><td>1</td></tr>
+                            <tr><td>1</td><td>0</td></tr>
+                        </table>
+                        <table>
+                            <tr><td>x</td></tr>
+                            <tr><td>y</td></tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Garis 𝑦 = −𝑥</td>
+                <td>A'(-y, -x)</td>
+                <td>
+                    <div class="matrix">
+                        <table>
+                            <tr><td>x'</td></tr>
+                            <tr><td>y'</td></tr>
+                        </table>
+                        <span>=</span>
+                        <table>
+                            <tr><td>0</td><td>-1</td></tr>
+                            <tr><td>-1</td><td>0</td></tr>
+                        </table>
+                        <table>
+                            <tr><td>x</td></tr>
+                            <tr><td>y</td></tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Garis 𝑥 = ℎ</td>
+                <td>A'(2h - x, y)</td>
+                <td>
+                    <div class="matrix">
+                        <table>
+                            <tr><td>x'</td></tr>
+                            <tr><td>y'</td></tr>
+                        </table>
+                        <span>=</span>
+                        <table>
+                            <tr><td>-1</td><td>0</td></tr>
+                            <tr><td>0</td><td>1</td></tr>
+                        </table>
+                        <table>
+                            <tr><td>x</td></tr>
+                            <tr><td>y</td></tr>
+                        </table>
+                        <span>+</span>
+                        <table>
+                            <tr><td>2h</td></tr>
+                            <tr><td>0</td></tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Garis 𝑦 = 𝑘</td>
+                <td>A'(x, 2k - y)</td>
+                <td>
+                    <div class="matrix">
+                        <table>
+                            <tr><td>x'</td></tr>
+                            <tr><td>y'</td></tr>
+                        </table>
+                        <span>=</span>
+                        <table>
+                            <tr><td>1</td><td>0</td></tr>
+                            <tr><td>0</td><td>-1</td></tr>
+                        </table>
+                        <table>
+                            <tr><td>x</td></tr>
+                            <tr><td>y</td></tr>
+                        </table>
+                        <span>+</span>
+                        <table>
+                            <tr><td>0</td></tr>
+                            <tr><td>2k</td></tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Contoh soal</h2>
+    
+    <div class="example">
+        <div class="example-title">Contoh soal 1:</div>
+        <p>Jika titik 𝐵(2,5) dicerminkan terhadap sumbu 𝑥 maka bayangan titik B adalah ...</p>
+        
+        <div class="example-title">Pembahasan:</div>
+        <p>B(2,5) <span class="transform-arrow">→</span> B'(x', y')</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>1</td><td>0</td></tr>
+                <tr><td>0</td><td>-1</td></tr>
+            </table>
+            <table>
+                <tr><td>2</td></tr>
+                <tr><td>5</td></tr>
+            </table>
+        </div>
+        <p>lakukan perkalian matriks</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>2</td></tr>
+                <tr><td>-5</td></tr>
+            </table>
+        </div>
+        
+        <p>Jadi bayangan titik B adalah 𝐵′(2,−5)</p>
+    </div>
+    
+    <div class="example">
+        <div class="example-title">Contoh soal 2:</div>
+        <p>Jika titik 𝐴(−4, −3) dicerminkan terhadap sumbu 𝑦 maka bayangan titik 𝐴 adalah ...</p>
+        
+        <p>A(-4, -3) <span class="transform-arrow">→</span> A'(x', y')</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>-1</td><td>0</td></tr>
+                <tr><td>0</td><td>1</td></tr>
+            </table>
+            <table>
+                <tr><td>-4</td></tr>
+                <tr><td>-3</td></tr>
+            </table>
+        </div>
+        <p>lakukan perkalian matriks</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>4</td></tr>
+                <tr><td>-3</td></tr>
+            </table>
+        </div>
+        
+        <p>Jadi, bayangan titik A adalah 𝐴′(4,−3)</p>
+    </div>
+    
+    <div class="example">
+        <div class="example-title">Contoh soal 3:</div>
+        <p>Jika titik 𝐴(−4, −3) dicerminkan terhadap titik asal O(0, 0) maka bayangan titik 𝐴 adalah ...</p>
+        
+        <p>A(-4, -3) <span class="transform-arrow">→</span> A'(x', y')</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>-1</td><td>0</td></tr>
+                <tr><td>0</td><td>-1</td></tr>
+            </table>
+            <table>
+                <tr><td>-4</td></tr>
+                <tr><td>-3</td></tr>
+            </table>
+        </div>
+        <p>lakukan perkalian matriks</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>4</td></tr>
+                <tr><td>3</td></tr>
+            </table>
+        </div>
+        
+        <p>Jadi, bayangan titik A adalah 𝐴′(4,3)</p>
+    </div>
+    
+    <div class="example">
+        <div class="example-title">Contoh soal 4:</div>
+        <p>Jika titik 𝑃(−5,4) dicerminkan terhadap garis 𝑦 = 𝑥 maka bayangan titik 𝑃 adalah ...</p>
+        
+        <p>P(-5,4) <span class="transform-arrow">→</span> P'(x', y')</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>0</td><td>1</td></tr>
+                <tr><td>1</td><td>0</td></tr>
+            </table>
+            <table>
+                <tr><td>-5</td></tr>
+                <tr><td>4</td></tr>
+            </table>
+        </div>
+        <p>lakukan perkalian matriks</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>4</td></tr>
+                <tr><td>-5</td></tr>
+            </table>
+        </div>
+        
+        <p>Jadi, bayangan titik P adalah 𝑃′(4, −5)</p>
+    </div>
+    
+    <div class="example">
+        <div class="example-title">Contoh soal 5:</div>
+        <p>Jika titik 𝑃(−5,4) dicerminkan terhadap garis 𝑦 = −𝑥 maka bayangan titik 𝑃 adalah ...</p>
+        
+        <p>P(-5,4) <span class="transform-arrow">→</span> P'(x', y')</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>0</td><td>-1</td></tr>
+                <tr><td>-1</td><td>0</td></tr>
+            </table>
+            <table>
+                <tr><td>-5</td></tr>
+                <tr><td>4</td></tr>
+            </table>
+        </div>
+        <p>lakukan perkalian matriks</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>-4</td></tr>
+                <tr><td>5</td></tr>
+            </table>
+        </div>
+        
+        <p>Jadi, bayangan titik P adalah 𝑃′(−4, 5)</p>
+    </div>
+    
+    <div class="example">
+        <div class="example-title">Contoh soal 6:</div>
+        <p>Jika titik 𝑃(5, 2) dicerminkan terhadap garis 𝑥 = 2 maka bayangan titik 𝑃 adalah ...</p>
+        
+        <p>P(5, 2) <span class="transform-arrow">→</span> P'(x', y')</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>-1</td><td>0</td></tr>
+                <tr><td>0</td><td>1</td></tr>
+            </table>
+            <table>
+                <tr><td>5</td></tr>
+                <tr><td>2</td></tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr><td>4</td></tr>
+                <tr><td>0</td></tr>
+            </table>
+        </div>
+        <p>lakukan perkalian matriks</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>-5 + 4</td></tr>
+                <tr><td>2 + 0</td></tr>
+            </table>
+        </div>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>-1</td></tr>
+                <tr><td>2</td></tr>
+            </table>
+        </div>
+        
+        <p>Jadi, bayangan titik P adalah 𝑃′(−1, 2)</p>
+    </div>
+    
+    <div class="example">
+        <div class="example-title">Contoh soal 7:</div>
+        <p>Jika kurva 𝑦 = 𝑥<sup>2</sup> + 3𝑥 −5 dicerminkan terhadap garis 𝑦 = 2 maka hasil bayangan kurva adalah ...</p>
+        
+        <p>P(x,y) <span class="transform-arrow">→</span> A'(x', y')</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>1</td><td>0</td></tr>
+                <tr><td>0</td><td>-1</td></tr>
+            </table>
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>y</td></tr>
+            </table>
+            <span>+</span>
+            <table>
+                <tr><td>0</td></tr>
+                <tr><td>4</td></tr>
+            </table>
+        </div>
+        <p>lakukan perkalian matriks</p>
+        
+        <div class="matrix">
+            <table>
+                <tr><td>x'</td></tr>
+                <tr><td>y'</td></tr>
+            </table>
+            <span>=</span>
+            <table>
+                <tr><td>x</td></tr>
+                <tr><td>-y + 4</td></tr>
+            </table>
+        </div>
+        
+        <p>Berdasarkan kesamaan dua matriks diperoleh</p>
+        <p>x' = x → x = x'</p>
+        <p>y' = -y + 4 → y = 4 - y'</p>
+        
+        <p>Substitusi x = x' dan y = 4 - y' ke persamaan kurva y = x<sup>2</sup> + 3x - 5</p>
+        <p>(4 - y') = (x')<sup>2</sup> + 3(x') - 5</p>
+        <p>-y' = x'<sup>2</sup> + 3x' - 5 - 4</p>
+        <p>y' = -x'<sup>2</sup> - 3x' + 9</p>
+        <p>y = -x<sup>2</sup> - 3x + 9</p>
+        
+        <p>Jadi persamaan bayangan garis 𝑔 adalah y = -x<sup>2</sup> - 3x + 9</p>
+    </div>
             <div class="card">
                 <h3>3. Rotasi (Perputaran)</h3>
                 <p>Rotasi adalah transformasi yang memindahkan titik-titik dengan cara memutar titik-titik tersebut sejauh α terhadap suatu titik tertentu.</p>
