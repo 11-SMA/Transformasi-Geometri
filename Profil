@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekap Identitas Kelompok 5</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .member-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .member-card:hover {
+            transform: translateY(-5px);
+        }
+        .photo-container {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .photo-placeholder {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 14px;
+            text-align: center;
+        }
+        .member-info {
+            padding: 20px;
+        }
+        .member-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .member-detail {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .member-detail strong {
+            color: #3498db;
+        }
+        .member-motto {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #f0f8ff;
+            border-left: 4px solid #3498db;
+            font-style: italic;
+        }
+        .university-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .university-logo {
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="university-header">
+        <!-- Ganti dengan logo universitas jika ada -->
+        <div class="photo-placeholder" style="margin: 0 auto;">LOGO UNEJ</div>
+        <h1>Rekap Identitas Kelompok 5</h1>
+    </div>
+
+    <div class="team-container">
+        <!-- Anggota 1 -->
+        <div class="member-card">
+            <div class="photo-container">
+                <div class="photo-placeholder">Foto Rafi Akbar Priatama</div>
+            </div>
+            <div class="member-info">
+                <div class="member-name">Rafi Akbar Priatama</div>
+                <div class="member-detail"><strong>NIM:</strong> 240210101087</div>
+                <div class="member-detail"><strong>TTL:</strong> Kediri, 27 Juni 2005</div>
+                <div class="member-detail"><strong>Akun:</strong> 240210101087@mail.unej.ac.id</div>
+                <div class="member-motto">"Pada akhirnya masa lalu akan tetap menjadi masa lalu, kamu bisa membekukannya dalam ingatanmu tapi itu tak akan pernah kembali, yang bisa kamu lakukan hanyalah terus maju dan melalukan hal yang lebih baik dari sebelumnya"</div>
+            </div>
+        </div>
+
+        <!-- Anggota 2 -->
+        <div class="member-card">
+            <div class="photo-container">
+                <div class="photo-placeholder">Foto Lingga Mahardika Wibisono</div>
+            </div>
+            <div class="member-info">
+                <div class="member-name">Lingga Mahardika Wibisono</div>
+                <div class="member-detail"><strong>NIM:</strong> 240210101089</div>
+                <div class="member-detail"><strong>TTL:</strong> Jember, 22 Juli 2005</div>
+                <div class="member-detail"><strong>Akun:</strong> linggawibisono281@gmail.com</div>
+                <div class="member-motto">"Yang penting sabar"</div>
+            </div>
+        </div>
+
+        <!-- Anggota 3 -->
+        <div class="member-card">
+            <div class="photo-container">
+                <div class="photo-placeholder">Foto Jeni She Amenda</div>
+            </div>
+            <div class="member-info">
+                <div class="member-name">Jeni She Amenda</div>
+                <div class="member-detail"><strong>NIM:</strong> 240210101092</div>
+                <div class="member-detail"><strong>TTL:</strong> Banyuwangi, 07 Januari 2006</div>
+                <div class="member-detail"><strong>Akun:</strong> 240210101092@mail.unej.ac.id</div>
+                <div class="member-motto">"Bismillah"</div>
+            </div>
+        </div>
+
+        <!-- Anggota 4 -->
+        <div class="member-card">
+            <div class="photo-container">
+                <div class="photo-placeholder">Foto Mutiara Nurrejatul Hasanah</div>
+            </div>
+            <div class="member-info">
+                <div class="member-name">Mutiara Nurrejatul Hasanah</div>
+                <div class="member-detail"><strong>NIM:</strong> 240210101098</div>
+                <div class="member-detail"><strong>TTL:</strong> Bondowoso, 19 Juli 2006</div>
+                <div class="member-detail"><strong>Akun:</strong> 240210101098@mail.unej.ac.id</div>
+                <div class="member-motto">"Jangan takut gagal, takutlah untuk tidak mencoba"</div>
+            </div>
+        </div>
+
+        <!-- Anggota 5 -->
+        <div class="member-card">
+            <div class="photo-container">
+                <div class="photo-placeholder">Foto Selvia Dwi Rahmawati</div>
+            </div>
+            <div class="member-info">
+                <div class="member-name">Selvia Dwi Rahmawati</div>
+                <div class="member-detail"><strong>NIM:</strong> 240210101107</div>
+                <div class="member-detail"><strong>TTL:</strong> Lumajang, 22 September 2005</div>
+                <div class="member-detail"><strong>Akun:</strong> 240210101107@mail.unej.ac.id</div>
+                <div class="member-motto">"Hidup tidak akan berubah sampai kamu berubah"</div>
+            </div>
+        </div>
+
+        <!-- Anggota 6 -->
+        <div class="member-card">
+            <div class="photo-container">
+                <div class="photo-placeholder">Foto Ike Nurjanah</div>
+            </div>
+            <div class="member-info">
+                <div class="member-name">Ike Nurjanah</div>
+                <div class="member-detail"><strong>NIM:</strong> 240210101109</div>
+                <div class="member-detail"><strong>TTL:</strong> Banyuwangi, 05 Januari 2005</div>
+                <div class="member-detail"><strong>Akun:</strong> 240210101109@mail.unej.ac.id</div>
+                <div class="member-motto">"Bagaikan mendaki gunung, tunduklah ketika mendaki, tegaklah ketika turun"</div>
+            </div>
+        </div>
+
+        <!-- Anggota 7 -->
+        <div class="member-card">
+            <div class="photo-container">
+                <div class="photo-placeholder">Foto Achmad Agus Salim</div>
+            </div>
+            <div class="member-info">
+                <div class="member-name">Achmad Agus Salim</div>
+                <div class="member-detail"><strong>NIM:</strong> 240210101119</div>
+                <div class="member-detail"><strong>TTL:</strong> Jember, 29 Agustus 2005</div>
+                <div class="member-detail"><strong>Akun:</strong> 240210101119@mail.unej.ac.id</div>
+                <div class="member-motto">"Try Hard mengalahkan Bakat"</div>
+            </div>
+        </div>
+
+        <!-- Anggota 8 -->
+        <div class="member-card">
+            <div class="photo-container">
+                <div class="photo-placeholder">Foto Gita Ilma Maulida</div>
+            </div>
+            <div class="member-info">
+                <div class="member-name">Gita Ilma Maulida</div>
+                <div class="member-detail"><strong>NIM:</strong> 240210101134</div>
+                <div class="member-detail"><strong>TTL:</strong> Banyuwangi, 24 April 2006</div>
+                <div class="member-detail"><strong>Akun:</strong> 240210101134@mail.unej.ac.id</div>
+                <div class="member-motto">"Sukses adalah jumlah dari upaya kecil yang diulangi hari demi hari"</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
