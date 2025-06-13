@@ -298,7 +298,7 @@
                 <ol>
                     <li>Jarak dari titik asal ke cermin sama dengan jarak cermin ke titik bayangan.</li>
                     <li>Garis yang menghubungkan titik asal dengan titik bayangan tegak lurus terhadap cermin.</li>
-                    <li>3.	Garis-garis yang terbentuk antara titik-titik asal dengan titik-titik bayangan akan saling sejajar.</li>
+                    <li>Garis-garis yang terbentuk antara titik-titik asal dengan titik-titik bayangan akan saling sejajar.</li>
                 </ol>
                 
                 <h4>Jenis-jenis Refleksi</h4>
@@ -351,7 +351,16 @@
                             <td>Sumbu Y</td>
                             <td>A'(-x, y)</td>
                             <td>
-                                <div class="matrix-container small-matrix">
+                                <div class="matrix-container">
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">x'</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">y'</div>
+                                        </div>
+                                    </div>
+                                    <span class="operator">=</span>
                                     <div class="matrix">
                                         <div class="matrix-row">
                                             <div class="matrix-cell">-1</div>
@@ -360,6 +369,15 @@
                                         <div class="matrix-row">
                                             <div class="matrix-cell">0</div>
                                             <div class="matrix-cell">1</div>
+                                        </div>
+                                    </div>
+                                    <span class="operator">×</span>
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">x</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">y</div>
                                         </div>
                                     </div>
                                 </div>
@@ -369,7 +387,16 @@
                             <td>Titik asal O(0,0)</td>
                             <td>A'(-x, -y)</td>
                             <td>
-                                <div class="matrix-container small-matrix">
+                                <div class="matrix-container">
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">x'</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">y'</div>
+                                        </div>
+                                    </div>
+                                    <span class="operator">=</span>
                                     <div class="matrix">
                                         <div class="matrix-row">
                                             <div class="matrix-cell">-1</div>
@@ -380,14 +407,149 @@
                                             <div class="matrix-cell">-1</div>
                                         </div>
                                     </div>
+                                    <span class="operator">×</span>
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">x</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">y</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <td>Garis y=x</td>
-                            <td>A'(y,x)</td>
+                            <td>Garis y = x</td>
+                            <td>A'(y, x)</td>
                             <td>
-                                <div class="matrix-container small-matrix">
+                                <div class="matrix-container">
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">x'</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">y'</div>
+                                        </div>
+                                    </div>
+                                    <span class="operator">=</span>
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">0</div>
+                                            <div class="matrix-cell">1</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">1</div>
+                                            <div class="matrix-cell">0</div>
+                                        </div>
+                                    </div>
+                                    <span class="operator">×</span>
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">x</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">y</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Garis y = -x</td>
+                            <td>A'(-x, -y)</td>
+                            <td>
+                                <div class="matrix-container">
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">x'</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">y'</div>
+                                        </div>
+                                    </div>
+                                    <span class="operator">=</span>
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">0</div>
+                                            <div class="matrix-cell">-1</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">-1</div>
+                                            <div class="matrix-cell">0</div>
+                                        </div>
+                                    </div>
+                                    <span class="operator">×</span>
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">x</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">y</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Garis x = h</td>
+                            <td>A'(2h-x, y)</td>
+                            <td>
+                                <div class="matrix-container">
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">x'</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">y'</div>
+                                        </div>
+                                    </div>
+                                    <span class="operator">=</span>
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">-1</div>
+                                            <div class="matrix-cell">0</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">0</div>
+                                            <div class="matrix-cell">1</div>
+                                        </div>
+                                    </div>
+                                    <span class="operator">×</span>
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">x</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">y</div>
+                                        </div>
+                                    </div>
+                                    <span class="operator">+</span>
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">2h</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">0</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Garis y = k</td>
+                            <td>A'(x, 2k- y)</td>
+                            <td>
+                                <div class="matrix-container">
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">x'</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">y'</div>
+                                        </div>
+                                    </div>
+                                    <span class="operator">=</span>
                                     <div class="matrix">
                                         <div class="matrix-row">
                                             <div class="matrix-cell">1</div>
@@ -395,7 +557,25 @@
                                         </div>
                                         <div class="matrix-row">
                                             <div class="matrix-cell">0</div>
-                                            <div class="matrix-cell">1</div>
+                                            <div class="matrix-cell">-1</div>
+                                        </div>
+                                    </div>
+                                    <span class="operator">×</span>
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">x</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">y</div>
+                                        </div>
+                                    </div>
+                                    <span class="operator">+</span>
+                                    <div class="matrix">
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">0</div>
+                                        </div>
+                                        <div class="matrix-row">
+                                            <div class="matrix-cell">2k</div>
                                         </div>
                                     </div>
                                 </div>
@@ -418,6 +598,13 @@
             <div class="card">
                 <h3>3. Rotasi (Perputaran)</h3>
                 <p>Rotasi adalah transformasi yang memindahkan titik-titik dengan cara memutar titik-titik tersebut sejauh α terhadap suatu titik tertentu.</p>
+                <p>Rotasi pada bidang datar ditentukan oleh:</p>
+                <ol>
+                    <li>Titik pusat rotasi</li>
+                    <li>Besar sudut rotasi</li>
+                    <li>Arah sudut rotasi</li>
+                </ol>
+                <p>Sudut rotasi merupakan sudut antara garis yang menghubungkan titik asal dan pusat rotasi yang menghubungkan titik bayangan dan pusat rotasi. Jika arah rotasi diputar searah jarum jam maka besar sudut rotasi negatif (-\alpha) jika arah rotasi diputar berlawanan jarum jam maka besar sudut rotasi positif (\alpha). Rotasi dinotasikan dengan R\ (P,\alpha) dimana p merupakan pusat rotasi dan \alpha besar sudut rotasi.</p>
                 
                 <h4>Rotasi terhadap titik pusat (0,0)</h4>
                 <div class="matrix-container">
