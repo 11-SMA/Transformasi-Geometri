@@ -82,6 +82,60 @@
             background-color: #f0f8ff;
             border-left: 4px solid #3498db;
             font-style: italic;
+            .lecturer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .lecturer-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .lecturer-card:hover {
+            transform: translateY(-5px);
+        }
+        .photo-container {
+            height: 200px;
+            background-color: #e6f2ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-radius: 8px 8px 0 0;
+        }
+        .photo-placeholder {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 14px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 3px solid #fff;
+        }
+        .lecturer-info {
+            padding: 20px;
+        }
+        .lecturer-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .lecturer-detail {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .lecturer-detail strong {
+            color: #3498db;
         }
         .university-header {
             text-align: center;
@@ -209,6 +263,50 @@
                 <div class="member-detail"><strong>TTL:</strong> Banyuwangi, 24 April 2006</div>
                 <div class="member-detail"><strong>Akun:</strong> 240210101134@mail.unej.ac.id</div>
                 <div class="member-motto">"Sukses adalah jumlah dari upaya kecil yang diulangi hari demi hari"</div>
+            </div>
+        </div>
+    </div>
+    <div class="university-header">
+        <h1>Profil Dosen</h1>
+    </div>
+
+    <div class="lecturer-container">
+        <!-- Dosen 1 -->
+        <div class="lecturer-card">
+            <div class="photo-container">
+                <div class="photo-placeholder">Foto Edy Wihardjo</div>
+            </div>
+            <div class="lecturer-info">
+                <div class="lecturer-name">Edy Wihardjo, S.Pd., M.Pd., M.C.E.</div>
+                <div class="lecturer-detail"><strong>NIP:</strong> 197001081999031001</div>
+                <div class="lecturer-detail"><strong>Email:</strong> edy.fkip@unej.ac.id</div>
+                <div class="lecturer-detail"><strong>Alamat:</strong> Jl. Nias Cluster A9 Jember</div>
+            </div>
+        </div>
+
+        <!-- Dosen 2 -->
+        <div class="lecturer-card">
+            <div class="photo-container">
+                <div class="photo-placeholder">Foto Dr. Erfan Yudianto</div>
+            </div>
+            <div class="lecturer-info">
+                <div class="lecturer-name">Dr. Erfan Yudianto, S.Pd., M.Pd.</div>
+                <div class="lecturer-detail"><strong>NIP:</strong> 198503162015041001</div>
+                <div class="lecturer-detail"><strong>Email:</strong> erfanyudi@unej.ac.id</div>
+                <div class="lecturer-detail"><strong>Alamat:</strong> Perum Istana Tegal Besar X-1</div>
+            </div>
+        </div>
+
+        <!-- Dosen 3 -->
+        <div class="lecturer-card">
+            <div class="photo-container">
+                <div class="photo-placeholder">Foto Lela Nur Safrida</div>
+            </div>
+            <div class="lecturer-info">
+                <div class="lecturer-name">Lela Nur Safrida, M.Pd.</div>
+                <div class="lecturer-detail"><strong>NIP:</strong> 199205122022032009</div>
+                <div class="lecturer-detail"><strong>Email:</strong> lelanurs@unej.ac.id</div>
+                <div class="lecturer-detail"><strong>Alamat:</strong> Jl. Manggar Gang Leci No. 51 Jember</div>
             </div>
         </div>
     </div>
