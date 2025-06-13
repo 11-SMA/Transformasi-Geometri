@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Pembelajaran Transformasi Geometri - Kelas 11 SMA</title>
     <style>
+        /* Global Styles dengan Gradient Background */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -12,17 +13,60 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
         }
-        
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 30px 20px;
-            border-radius: 8px;
+
+        /* Header dengan Desain Modern */
+        .header {
             text-align: center;
             margin-bottom: 30px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            padding: 20px;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.1) 100%);
+            z-index: 0;
+            border-radius: 15px;
+        }
+
+        .header h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            font-size: 28px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            position: relative;
+            z-index: 1;
+            margin: 10px 0 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Kop Lembar dengan Desain Card */
+        .kop {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         
         h1 {
@@ -896,7 +940,7 @@
                 <li><a href="#">Video Pembelajaran Transformasi Geometri</a></li>
                 <li><a href="#">Simulasi Geogebra Transformasi</a></li>
                 <li><a href="#">Latihan Soal Interaktif</a></li>
-                <li><a href="lks.html">Lembar Kerja Peserta Didik</a></li>
+                <li><a href="lks.html">Lembar Kerja Siswa</a></li>
                 <li><a href="profil.html">Profil Kelompok Pengembang</a></li>
             </ul>
         </section>
