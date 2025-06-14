@@ -79,7 +79,27 @@
             border-radius: 3px;
             font-family: "Courier New", monospace;
         }
+        .MathJax {
+            font-size: 1.1em;
+        }
     </style>
+    <!-- Load MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                packages: {'[+]': ['ams']}
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',
+                processHtmlClass: 'tex2jax_process'
+            }
+        };
+    </script>
 </head>
 <body>
     <h1>Latihan Soal Transformasi Geometri</h1>
@@ -379,6 +399,7 @@
         </div>
     </div>
 
+
     <script>
         // Jawaban yang benar untuk setiap soal
         const jawabanBenar = {
@@ -435,6 +456,11 @@
                 } else {
                     pembahasanElement.style.display = "block";
                     this.textContent = "Sembunyikan Pembahasan";
+                }
+                
+                // Memicu MathJax untuk merender ulang setelah menampilkan pembahasan
+                if (typeof MathJax !== 'undefined') {
+                    MathJax.typesetPromise();
                 }
             });
         });
