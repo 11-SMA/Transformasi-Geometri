@@ -157,6 +157,35 @@
         .MathJax {
             font-size: 1.1em;
         }
+        
+        /* Back Button Styles di bawah */
+        .back-button {
+            display: block;
+            width: fit-content;
+            margin: 40px auto 0;
+            padding: 10px 20px;
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            background: linear-gradient(to right, #3498db, #2c3e50);
+        }
+
+        .back-button::before {
+            content: "←";
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
     </style>
     <!-- Load MathJax -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -177,9 +206,6 @@
     </script>
 </head>
 <body>
-    <!-- Back Button -->
-    <a href="index.html" class="back-button">Kembali ke Beranda</a>
-
     <div class="header">
     <h1>Latihan Soal Transformasi Geometri</h1>
     </div>
@@ -535,6 +561,9 @@
             <p><strong>Jawaban: Bayangan titik M adalah (4, 10)</strong></p>
         </div>
     </div>
+
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">Kembali ke Beranda</a>
 
     <script>
         // Jawaban yang benar untuk setiap soal
