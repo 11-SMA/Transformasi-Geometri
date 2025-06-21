@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulasi Transformasi Geometri dengan GeoGebra</title>
     <style>
+        /* Global Styles dengan Gradient Background */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            max-width: 900px;
+            color: #333;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
         }
+
         /* Back Button Styles */
         .back-button {
             position: absolute;
@@ -42,6 +46,47 @@
             margin-right: 8px;
             font-size: 18px;
         }
+                /* Header dengan Desain Modern */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.1) 100%);
+            z-index: 0;
+            border-radius: 15px;
+        }
+
+        .header h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            font-size: 32px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            position: relative;
+            z-index: 1;
+            margin: 10px 0 0;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
         h1 {
             color: #2c3e50;
             text-align: center;
