@@ -15,13 +15,14 @@
             padding: 20px;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
+            position: relative;
         }
 
         /* Back Button Styles */
         .back-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
+            position: fixed;
+            top: 30px;
+            left: 30px;
             padding: 10px 20px;
             background: linear-gradient(to right, #2c3e50, #3498db);
             color: white;
@@ -51,13 +52,14 @@
         .header {
             text-align: center;
             margin-bottom: 30px;
-            padding: 20px;
+            padding: 30px 20px;
             background: linear-gradient(to right, #3498db, #2c3e50);
             color: white;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             position: relative;
             overflow: hidden;
+            margin-top: 20px;
         }
 
         .header::before {
@@ -92,19 +94,18 @@
         .kop {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
             margin-bottom: 30px;
             background: white;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            gap: 20px;
         }
 
-        .student-info {
-            width: 50%;
-        }
-
-        .school-info {
-            width: 25%;
+        .student-info, .school-info {
+            flex: 1;
+            min-width: 250px;
         }
 
         .form-group {
@@ -116,14 +117,17 @@
             margin-bottom: 5px;
             font-weight: bold;
             color: #2c3e50;
+            font-size: 14px;
         }
 
         input[type="text"] {
             width: 100%;
-            padding: 10px;
+            padding: 10px 12px;
             border: 1px solid #ddd;
             border-radius: 6px;
             transition: border 0.3s;
+            font-size: 14px;
+            box-sizing: border-box;
         }
 
         input[type="text"]:focus {
@@ -159,14 +163,18 @@
             margin-top: 15px;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         input[type="text"].answer {
-            width: 200px;
-            padding: 10px;
+            flex: 1;
+            min-width: 200px;
+            padding: 10px 12px;
             border: 1px solid #ddd;
             border-radius: 6px;
             transition: all 0.3s;
+            font-size: 14px;
         }
 
         input[type="text"].answer:focus {
@@ -181,10 +189,11 @@
             padding: 10px 20px;
             border-radius: 6px;
             cursor: pointer;
-            margin-left: 15px;
             font-weight: bold;
             transition: all 0.3s;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-size: 14px;
+            white-space: nowrap;
         }
 
         .check-btn:hover {
@@ -195,10 +204,11 @@
 
         .result {
             display: inline-block;
-            margin-left: 15px;
+            margin-left: 10px;
             font-weight: bold;
             padding: 5px 10px;
             border-radius: 4px;
+            font-size: 14px;
         }
 
         .correct {
@@ -267,25 +277,30 @@
             background: #3498db;
         }
 
-        /* Efek Dekoratif */
-        .math-icon {
-            position: absolute;
-            opacity: 0.1;
-            z-index: 0;
-        }
-
-        .math-icon-1 {
-            top: 50px;
-            right: 50px;
-            font-size: 100px;
-            transform: rotate(15deg);
-        }
-
-        .math-icon-2 {
-            bottom: 50px;
-            left: 50px;
-            font-size: 100px;
-            transform: rotate(-15deg);
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .kop {
+                flex-direction: column;
+            }
+            
+            .student-info, .school-info {
+                width: 100%;
+            }
+            
+            .back-button {
+                top: 15px;
+                left: 15px;
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+            
+            .header {
+                padding: 25px 15px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
@@ -295,236 +310,244 @@
 
     <div class="header">
         <h1>LKS Transformasi Geometri</h1>
-        <p>Materi Refleksi, Dilatasi, Translasi, dan Rotasi</p>
+        <p>Materi Translasi, Refleksi, Rotasi, dan Dilatasi</p>
     </div>
 
     <div class="kop">
         <div class="student-info">
             <div class="form-group">
-                <label for="nama">Nama:</label>
-                <input type="text" id="nama" placeholder="Masukkan nama lengkap">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" placeholder="Isi nama lengkap Anda">
             </div>
             <div class="form-group">
                 <label for="kelas">Kelas:</label>
                 <input type="text" id="kelas" placeholder="Contoh: X MIPA 1">
             </div>
+            <div class="form-group">
+                <label for="absen">Nomor Absen:</label>
+                <input type="text" id="absen" placeholder="Nomor urut absen">
+            </div>
         </div>
         <div class="school-info">
             <div class="form-group">
                 <label for="sekolah">Asal Sekolah:</label>
-                <input type="text" id="sekolah" placeholder="Nama sekolah">
+                <input type="text" id="sekolah" placeholder="Nama sekolah Anda">
             </div>
             <div class="form-group">
                 <label for="tanggal">Tanggal:</label>
                 <input type="text" id="tanggal" placeholder="DD/MM/YYYY">
             </div>
-        </div>
-    </div>
-
-    <h2 class="section-title">Refleksi</h2>
-
-    <!-- Soal 1 Refleksi -->
-    <div class="question" id="q1">
-        <div class="question-number">1. Jika titik C (3, −7) dicerminkan terhadap sumbu X, maka bayangan titik C adalah ...</div>
-        <div class="answer-input">
-            <input type="text" class="answer" id="a1" placeholder="Masukkan jawaban (x,y)">
-            <button class="check-btn" onclick="checkAnswer(1, '3,7')">Cek Jawaban</button>
-            <span class="result" id="r1"></span>
-        </div>
-    </div>
-
-    <!-- Soal 2 Refleksi -->
-    <div class="question" id="q2">
-        <div class="question-number">2. Jika titik D (−6, 9) dicerminkan terhadap sumbu Y, maka bayangan titik D adalah ...</div>
-        <div class="answer-input">
-            <input type="text" class="answer" id="a2" placeholder="Masukkan jawaban (x,y)">
-            <button class="check-btn" onclick="checkAnswer(2, '6,9')">Cek Jawaban</button>
-            <span class="result" id="r2"></span>
-        </div>
-    </div>
-
-    <!-- Soal 3 Refleksi -->
-    <div class="question" id="q3">
-        <div class="question-number">3. Jika titik E (1, −4) dicerminkan terhadap titik asal O (0,0) maka bayangan titik E adalah ...</div>
-        <div class="answer-input">
-            <input type="text" class="answer" id="a3" placeholder="Masukkan jawaban (x,y)">
-            <button class="check-btn" onclick="checkAnswer(3, '-1,4')">Cek Jawaban</button>
-            <span class="result" id="r3"></span>
-        </div>
-    </div>
-
-    <!-- Soal 4 Refleksi -->
-    <div class="question" id="q4">
-        <div class="question-number">4. Jika titik F (5, −2) dicerminkan terhadap garis y = x, maka bayangan titik F adalah ...</div>
-        <div class="answer-input">
-            <input type="text" class="answer" id="a4" placeholder="Masukkan jawaban (x,y)">
-            <button class="check-btn" onclick="checkAnswer(4, '-2,5')">Cek Jawaban</button>
-            <span class="result" id="r4"></span>
-        </div>
-    </div>
-
-    <!-- Soal 5 Refleksi -->
-    <div class="question" id="q5">
-        <div class="question-number">5. Jika kurva y = 2x² - x + 1 dicerminkan terhadap garis x = 3, maka hasil bayangan kurva adalah ...</div>
-        <div class="answer-input">
-            <input type="text" class="answer" id="a5" placeholder="Masukkan persamaan bayangan">
-            <button class="check-btn" onclick="checkAnswer(5, 'y=2x²-23x+67')">Cek Jawaban</button>
-            <span class="result" id="r5"></span>
-        </div>
-    </div>
-
-    <h2 class="section-title">Dilatasi</h2>
-
-    <!-- Soal 1 Dilatasi -->
-    <div class="question" id="q6">
-        <div class="question-number">1. Titik A (2, −3) didilatasikan dengan faktor skala k=4 dan pusat O (0,0). Tentukan koordinat bayangan titik A!</div>
-        <div class="answer-input">
-            <input type="text" class="answer" id="a6" placeholder="Masukkan jawaban (x,y)">
-            <button class="check-btn" onclick="checkAnswer(6, '8,-12')">Cek Jawaban</button>
-            <span class="result" id="r6"></span>
-        </div>
-    </div>
-
-    <!-- Soal 2 Dilatasi -->
-    <div class="question" id="q7">
-        <div class="question-number">2. Titik B (−1, 5) didilatasikan dengan faktor skala k = −2 dan pusat O (0, 0). Tentukan koordinat bayangan titik B!</div>
-        <div class="answer-input">
-            <input type="text" class="answer" id="a7" placeholder="Masukkan jawaban (x,y)">
-            <button class="check-btn" onclick="checkAnswer(7, '2,-10')">Cek Jawaban</button>
-            <span class="result" id="r7"></span>
-        </div>
-    </div>
-
-    <!-- Soal 3 Dilatasi -->
-    <div class="question" id="q8">
-        <div class="question-number">3. Titik C (3, 7) didilatasikan dengan faktor skala k = ½ dan pusat P (1, −2). Tentukan koordinat bayangan titik C!</div>
-        <div class="answer-input">
-            <input type="text" class="answer" id="a8" placeholder="Masukkan jawaban (x,y)">
-            <button class="check-btn" onclick="checkAnswer(8, '2,2.5')">Cek Jawaban</button>
-            <span class="result" id="r8"></span>
-        </div>
-    </div>
-
-    <!-- Soal 4 Dilatasi -->
-    <div class="question" id="q9">
-        <div class="question-number">4. Sebuah segitiga memiliki titik-titik sudut D (2, 1), E (4, 3), dan F (0, 5). Jika segitiga tersebut didilatasikan dengan faktor skala k = 3 dan pusat O (0, 0), tentukan koordinat bayangan segitiga tersebut!</div>
-        <div class="answer-input">
-            <input type="text" class="answer" id="a9" placeholder="Masukkan jawaban (x,y) untuk D', E', F'">
-            <button class="check-btn" onclick="checkAnswer(9, '6,3;12,9;0,15')">Cek Jawaban</button>
-            <span class="result" id="r9"></span>
-        </div>
-    </div>
-
-    <!-- Soal 5 Dilatasi -->
-    <div class="question" id="q10">
-        <div class="question-number">5. Persamaan lingkaran x² + y² = 25 didilatasikan dengan faktor skala k = 2 dan pusat O (0, 0). Tentukan persamaan bayangan lingkaran tersebut!</div>
-        <div class="answer-input">
-            <input type="text" class="answer" id="a10" placeholder="Masukkan persamaan bayangan">
-            <button class="check-btn" onclick="checkAnswer(10, 'x²+y²=100')">Cek Jawaban</button>
-            <span class="result" id="r10"></span>
+            <div class="form-group">
+                <label for="semester">Semester:</label>
+                <input type="text" id="semester" placeholder="Contoh: Ganjil 2023">
+            </div>
         </div>
     </div>
 
     <h2 class="section-title">Translasi</h2>
 
     <!-- Soal 1 Translasi -->
-    <div class="question" id="q11">
+    <div class="question" id="q1">
         <div class="question-number">1. Koordinat bayangan titik A (-4,2) oleh translasi T = (3,5) adalah ...</div>
         <div class="answer-input">
-            <input type="text" class="answer" id="a11" placeholder="Masukkan jawaban (x,y)">
-            <button class="check-btn" onclick="checkAnswer(11, '-1,7')">Cek Jawaban</button>
-            <span class="result" id="r11"></span>
+            <input type="text" class="answer" id="a1" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(1, '-1,7')">Cek Jawaban</button>
+            <span class="result" id="r1"></span>
         </div>
     </div>
 
     <!-- Soal 2 Translasi -->
-    <div class="question" id="q12">
+    <div class="question" id="q2">
         <div class="question-number">2. Tentukan koordinat titik A(1,2) jika ditranslasikan terhadap T = (4,6)!</div>
         <div class="answer-input">
-            <input type="text" class="answer" id="a12" placeholder="Masukkan jawaban (x,y)">
-            <button class="check-btn" onclick="checkAnswer(12, '5,8')">Cek Jawaban</button>
-            <span class="result" id="r12"></span>
+            <input type="text" class="answer" id="a2" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(2, '5,8')">Cek Jawaban</button>
+            <span class="result" id="r2"></span>
         </div>
     </div>
 
     <!-- Soal 3 Translasi -->
-    <div class="question" id="q13">
+    <div class="question" id="q3">
         <div class="question-number">3. Diketahui segitiga ABC dengan titik sudut A(1,2), B(3,4) dan C(2,6). Tentukan koordinat segitiga ABC jika digeser oleh T(1,2).</div>
         <div class="answer-input">
-            <input type="text" class="answer" id="a13" placeholder="Masukkan jawaban A', B', C'">
-            <button class="check-btn" onclick="checkAnswer(13, '2,4;4,6;3,8')">Cek Jawaban</button>
-            <span class="result" id="r13"></span>
+            <input type="text" class="answer" id="a3" placeholder="Masukkan jawaban A', B', C'">
+            <button class="check-btn" onclick="checkAnswer(3, '2,4;4,6;3,8')">Cek Jawaban</button>
+            <span class="result" id="r3"></span>
         </div>
     </div>
 
     <!-- Soal 4 Translasi -->
-    <div class="question" id="q14">
+    <div class="question" id="q4">
         <div class="question-number">4. Tentukan bayangan garis 2x - 5y - 1 = 0 oleh translasi T = (3,-2)</div>
         <div class="answer-input">
-            <input type="text" class="answer" id="a14" placeholder="Masukkan persamaan bayangan">
-            <button class="check-btn" onclick="checkAnswer(14, '2x-5y-17=0')">Cek Jawaban</button>
-            <span class="result" id="r14"></span>
+            <input type="text" class="answer" id="a4" placeholder="Masukkan persamaan bayangan">
+            <button class="check-btn" onclick="checkAnswer(4, '2x-5y-17=0')">Cek Jawaban</button>
+            <span class="result" id="r4"></span>
         </div>
     </div>
 
     <!-- Soal 5 Translasi -->
-    <div class="question" id="q15">
+    <div class="question" id="q5">
         <div class="question-number">5. Tentukan bayangan garis y = 2x - 3 oleh translasi T = (2,3)</div>
         <div class="answer-input">
-            <input type="text" class="answer" id="a15" placeholder="Masukkan persamaan bayangan">
-            <button class="check-btn" onclick="checkAnswer(15, 'y=2x-4')">Cek Jawaban</button>
-            <span class="result" id="r15"></span>
+            <input type="text" class="answer" id="a5" placeholder="Masukkan persamaan bayangan">
+            <button class="check-btn" onclick="checkAnswer(5, 'y=2x-4')">Cek Jawaban</button>
+            <span class="result" id="r5"></span>
+        </div>
+    </div>
+
+    <h2 class="section-title">Refleksi</h2>
+
+    <!-- Soal 1 Refleksi -->
+    <div class="question" id="q6">
+        <div class="question-number">1. Jika titik C (3, −7) dicerminkan terhadap sumbu X, maka bayangan titik C adalah ...</div>
+        <div class="answer-input">
+            <input type="text" class="answer" id="a6" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(6, '3,7')">Cek Jawaban</button>
+            <span class="result" id="r6"></span>
+        </div>
+    </div>
+
+    <!-- Soal 2 Refleksi -->
+    <div class="question" id="q7">
+        <div class="question-number">2. Jika titik D (−6, 9) dicerminkan terhadap sumbu Y, maka bayangan titik D adalah ...</div>
+        <div class="answer-input">
+            <input type="text" class="answer" id="a7" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(7, '6,9')">Cek Jawaban</button>
+            <span class="result" id="r7"></span>
+        </div>
+    </div>
+
+    <!-- Soal 3 Refleksi -->
+    <div class="question" id="q8">
+        <div class="question-number">3. Jika titik E (1, −4) dicerminkan terhadap titik asal O (0,0) maka bayangan titik E adalah ...</div>
+        <div class="answer-input">
+            <input type="text" class="answer" id="a8" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(8, '-1,4')">Cek Jawaban</button>
+            <span class="result" id="r8"></span>
+        </div>
+    </div>
+
+    <!-- Soal 4 Refleksi -->
+    <div class="question" id="q9">
+        <div class="question-number">4. Jika titik F (5, −2) dicerminkan terhadap garis y = x, maka bayangan titik F adalah ...</div>
+        <div class="answer-input">
+            <input type="text" class="answer" id="a9" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(9, '-2,5')">Cek Jawaban</button>
+            <span class="result" id="r9"></span>
+        </div>
+    </div>
+
+    <!-- Soal 5 Refleksi -->
+    <div class="question" id="q10">
+        <div class="question-number">5. Jika kurva y = 2x² - x + 1 dicerminkan terhadap garis x = 3, maka hasil bayangan kurva adalah ...</div>
+        <div class="answer-input">
+            <input type="text" class="answer" id="a10" placeholder="Masukkan persamaan bayangan">
+            <button class="check-btn" onclick="checkAnswer(10, 'y=2x²-23x+67')">Cek Jawaban</button>
+            <span class="result" id="r10"></span>
         </div>
     </div>
 
     <h2 class="section-title">Rotasi</h2>
 
     <!-- Soal 1 Rotasi -->
-    <div class="question" id="q16">
+    <div class="question" id="q11">
         <div class="question-number">1. Titik A(2,4) dirotasi sebesar 60° berlawanan arah jarum jam dengan pusat (0,0). Maka bayangan titik A menjadi?</div>
         <div class="answer-input">
-            <input type="text" class="answer" id="a16" placeholder="Masukkan jawaban (x,y)">
-            <button class="check-btn" onclick="checkAnswer(16, '1-2√3,2+√3')">Cek Jawaban</button>
-            <span class="result" id="r16"></span>
+            <input type="text" class="answer" id="a11" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(11, '1-2√3,2+√3')">Cek Jawaban</button>
+            <span class="result" id="r11"></span>
         </div>
     </div>
 
     <!-- Soal 2 Rotasi -->
-    <div class="question" id="q17">
+    <div class="question" id="q12">
         <div class="question-number">2. Jika titik P(-1, 1) dirotasi pada titik B(3, -2) sejauh 90° maka hasilnya adalah ...</div>
         <div class="answer-input">
-            <input type="text" class="answer" id="a17" placeholder="Masukkan jawaban (x,y)">
-            <button class="check-btn" onclick="checkAnswer(17, '2,5')">Cek Jawaban</button>
-            <span class="result" id="r17"></span>
+            <input type="text" class="answer" id="a12" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(12, '2,5')">Cek Jawaban</button>
+            <span class="result" id="r12"></span>
         </div>
     </div>
 
     <!-- Soal 3 Rotasi -->
-    <div class="question" id="q18">
+    <div class="question" id="q13">
         <div class="question-number">3. Bayangan titik P(2, -3) oleh rotasi R[O,90°] adalah ...</div>
         <div class="answer-input">
-            <input type="text" class="answer" id="a18" placeholder="Masukkan jawaban (x,y)">
-            <button class="check-btn" onclick="checkAnswer(18, '3,2')">Cek Jawaban</button>
-            <span class="result" id="r18"></span>
+            <input type="text" class="answer" id="a13" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(13, '3,2')">Cek Jawaban</button>
+            <span class="result" id="r13"></span>
         </div>
     </div>
 
     <!-- Soal 4 Rotasi -->
-    <div class="question" id="q19">
+    <div class="question" id="q14">
         <div class="question-number">4. Tentukan bayangan garis y = 5x + 4 oleh rotasi R(O,90°)</div>
         <div class="answer-input">
-            <input type="text" class="answer" id="a19" placeholder="Masukkan persamaan bayangan">
-            <button class="check-btn" onclick="checkAnswer(19, 'x+5y+4=0')">Cek Jawaban</button>
-            <span class="result" id="r19"></span>
+            <input type="text" class="answer" id="a14" placeholder="Masukkan persamaan bayangan">
+            <button class="check-btn" onclick="checkAnswer(14, 'x+5y+4=0')">Cek Jawaban</button>
+            <span class="result" id="r14"></span>
         </div>
     </div>
 
     <!-- Soal 5 Rotasi -->
-    <div class="question" id="q20">
+    <div class="question" id="q15">
         <div class="question-number">5. Jika garis x - 2y = 5 diputar sejauh 90° terhadap titik (2, 4) berlawanan arah putaran jarum jam, maka persamaan bayangannya adalah ...</div>
         <div class="answer-input">
+            <input type="text" class="answer" id="a15" placeholder="Masukkan persamaan bayangan">
+            <button class="check-btn" onclick="checkAnswer(15, '2x+y=19')">Cek Jawaban</button>
+            <span class="result" id="r15"></span>
+        </div>
+    </div>
+
+    <h2 class="section-title">Dilatasi</h2>
+
+    <!-- Soal 1 Dilatasi -->
+    <div class="question" id="q16">
+        <div class="question-number">1. Titik A (2, −3) didilatasikan dengan faktor skala k=4 dan pusat O (0,0). Tentukan koordinat bayangan titik A!</div>
+        <div class="answer-input">
+            <input type="text" class="answer" id="a16" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(16, '8,-12')">Cek Jawaban</button>
+            <span class="result" id="r16"></span>
+        </div>
+    </div>
+
+    <!-- Soal 2 Dilatasi -->
+    <div class="question" id="q17">
+        <div class="question-number">2. Titik B (−1, 5) didilatasikan dengan faktor skala k = −2 dan pusat O (0, 0). Tentukan koordinat bayangan titik B!</div>
+        <div class="answer-input">
+            <input type="text" class="answer" id="a17" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(17, '2,-10')">Cek Jawaban</button>
+            <span class="result" id="r17"></span>
+        </div>
+    </div>
+
+    <!-- Soal 3 Dilatasi -->
+    <div class="question" id="q18">
+        <div class="question-number">3. Titik C (3, 7) didilatasikan dengan faktor skala k = ½ dan pusat P (1, −2). Tentukan koordinat bayangan titik C!</div>
+        <div class="answer-input">
+            <input type="text" class="answer" id="a18" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(18, '2,2.5')">Cek Jawaban</button>
+            <span class="result" id="r18"></span>
+        </div>
+    </div>
+
+    <!-- Soal 4 Dilatasi -->
+    <div class="question" id="q19">
+        <div class="question-number">4. Sebuah segitiga memiliki titik-titik sudut D (2, 1), E (4, 3), dan F (0, 5). Jika segitiga tersebut didilatasikan dengan faktor skala k = 3 dan pusat O (0, 0), tentukan koordinat bayangan segitiga tersebut!</div>
+        <div class="answer-input">
+            <input type="text" class="answer" id="a19" placeholder="Masukkan jawaban (x,y) untuk D', E', F'">
+            <button class="check-btn" onclick="checkAnswer(19, '6,3;12,9;0,15')">Cek Jawaban</button>
+            <span class="result" id="r19"></span>
+        </div>
+    </div>
+
+    <!-- Soal 5 Dilatasi -->
+    <div class="question" id="q20">
+        <div class="question-number">5. Persamaan lingkaran x² + y² = 25 didilatasikan dengan faktor skala k = 2 dan pusat O (0, 0). Tentukan persamaan bayangan lingkaran tersebut!</div>
+        <div class="answer-input">
             <input type="text" class="answer" id="a20" placeholder="Masukkan persamaan bayangan">
-            <button class="check-btn" onclick="checkAnswer(20, '2x+y=19')">Cek Jawaban</button>
+            <button class="check-btn" onclick="checkAnswer(20, 'x²+y²=100')">Cek Jawaban</button>
             <span class="result" id="r20"></span>
         </div>
     </div>
@@ -535,10 +558,10 @@
     <script>
         // Array untuk menyimpan jawaban yang benar
         const correctAnswers = [
-            '3,7', '6,9', '-1,4', '-2,5', 'y=2x²-23x+67',
-            '8,-12', '2,-10', '2,2.5', '6,3;12,9;0,15', 'x²+y²=100',
             '-1,7', '5,8', '2,4;4,6;3,8', '2x-5y-17=0', 'y=2x-4',
-            '1-2√3,2+√3', '2,5', '3,2', 'x+5y+4=0', '2x+y=19'
+            '3,7', '6,9', '-1,4', '-2,5', 'y=2x²-23x+67',
+            '1-2√3,2+√3', '2,5', '3,2', 'x+5y+4=0', '2x+y=19',
+            '8,-12', '2,-10', '2,2.5', '6,3;12,9;0,15', 'x²+y²=100'
         ];
 
         // Array untuk menyimpan status jawaban (benar/salah)
