@@ -15,6 +15,37 @@
             padding: 20px;
             background: #3498db;
             min-height: 100vh;
+            position: relative;
+        }
+
+        /* Back Button Styles */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            background: linear-gradient(to right, #3498db, #2c3e50);
+        }
+
+        .back-button::before {
+            content: "←";
+            margin-right: 8px;
+            font-size: 18px;
         }
 
         /* Header dengan Desain Modern */
@@ -118,25 +149,12 @@
             border-left: 4px solid #3498db;
             font-style: italic;
         }
-
-        /* Back to Home Button */
-        .back-button {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 10px 20px;
-            background-color: #2c3e50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .back-button:hover {
-            background-color: #1a252f;
-        }
     </style>
 </head>
 <body>
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">Kembali ke Beranda</a>
+
     <div class="university-header">
         <img src="LOGO UNEJ.png" alt="Logo Unej" style="width: 100px; height: 100px;">
         <h1>Profil Mahasiswa</h1>
@@ -298,11 +316,6 @@
                 <div class="lecturer-detail"><strong>Alamat:</strong> Jl. Manggar Gang Leci No. 51 Jember</div>
             </div>
         </div>
-    </div>
-
-    <!-- Back to Home Button -->
-    <div style="text-align: center; margin-top: 40px;">
-        <a href="index.html" class="back-button">Kembali ke Beranda</a>
     </div>
 </body>
 </html>
