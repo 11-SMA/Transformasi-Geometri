@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelajaran Transformasi Geometri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .video-card {
+            width: 400px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+        .thumbnail {
+            position: relative;
+            cursor: pointer;
+        }
+        .thumbnail img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .play-icon::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 25px solid #e74c3c;
+            margin-left: 5px;
+        }
+        .video-info {
+            padding: 15px;
+        }
+        .video-info h2 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+            font-size: 1.2em;
+        }
+        .video-info p {
+            margin: 0;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pembelajaran Transformasi Geometri</h1>
+    
+    <div class="video-container">
+        <!-- Bagian 1 - Translasi -->
+        <div class="video-card">
+            <div class="thumbnail" onclick="window.open('https://youtu.be/iojzS-0DI_g?si=RRXKeSYWa7KXKqUs', '_blank')">
+                <img src="https://img.youtube.com/vi/iojzS-0DI_g/maxresdefault.jpg" alt="Translasi Thumbnail">
+                <div class="play-icon"></div>
+            </div>
+            <div class="video-info">
+                <h2>Bagian 1 - Translasi</h2>
+                <p>Pelajari konsep dasar translasi dalam transformasi geometri</p>
+            </div>
+        </div>
+        
+        <!-- Bagian 2 - Refleksi -->
+        <div class="video-card">
+            <div class="thumbnail" onclick="window.open('https://youtu.be/qT9pr1C_SDY?si=T1mPZz_a1yg4wqdB', '_blank')">
+                <img src="https://img.youtube.com/vi/qT9pr1C_SDY/maxresdefault.jpg" alt="Refleksi Thumbnail">
+                <div class="play-icon"></div>
+            </div>
+            <div class="video-info">
+                <h2>Bagian 2 - Refleksi</h2>
+                <p>Memahami refleksi atau pencerminan dalam geometri</p>
+            </div>
+        </div>
+        
+        <!-- Bagian 3 - Rotasi -->
+        <div class="video-card">
+            <div class="thumbnail" onclick="window.open('https://youtu.be/lBFnXBvfvnY?si=u5QdDhSP2qX5q1wY', '_blank')">
+                <img src="https://img.youtube.com/vi/lBFnXBvfvnY/maxresdefault.jpg" alt="Rotasi Thumbnail">
+                <div class="play-icon"></div>
+            </div>
+            <div class="video-info">
+                <h2>Bagian 3 - Rotasi</h2>
+                <p>Konsep rotasi atau perputaran dalam transformasi geometri</p>
+            </div>
+        </div>
+        
+        <!-- Bagian 4 - Dilatasi -->
+        <div class="video-card">
+            <div class="thumbnail" onclick="window.open('https://youtu.be/uMxYXmfCLgA?si=9kGB42ly3u2cDn_V', '_blank')">
+                <img src="https://img.youtube.com/vi/uMxYXmfCLgA/maxresdefault.jpg" alt="Dilatasi Thumbnail">
+                <div class="play-icon"></div>
+            </div>
+            <div class="video-info">
+                <h2>Bagian 4 - Dilatasi</h2>
+                <p>Memahami dilatasi atau perubahan skala dalam geometri</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fallback jika thumbnail tidak tersedia
+        document.querySelectorAll('.thumbnail img').forEach(img => {
+            img.onerror = function() {
+                this.src = 'https://via.placeholder.com/400x225?text=Thumbnail+Tidak+Tersedia';
+            };
+        });
+
+        // Perbaiki URL thumbnail yang mungkin salah
+        const thumbnails = document.querySelectorAll('.thumbnail img');
+        thumbnails.forEach(thumb => {
+            const currentSrc = thumb.getAttribute('src');
+            if (currentSrc.startsWith('https://')) {
+                thumb.src = currentSrc.replace('https://', 'https://');
+            }
+        });
+    </script>
+</body>
+</html>
