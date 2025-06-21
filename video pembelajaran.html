@@ -17,11 +17,11 @@
             min-height: 100vh;
         }
 
-        /* Back Button Styles */
+        /* Back Button Styles di bawah */
         .back-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
+            display: block;
+            width: fit-content;
+            margin: 40px auto 0;
             padding: 10px 20px;
             background: linear-gradient(to right, #2c3e50, #3498db);
             color: white;
@@ -30,9 +30,7 @@
             font-weight: bold;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
             transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            z-index: 100;
+            text-align: center;
         }
 
         .back-button:hover {
@@ -158,9 +156,6 @@
     </style>
 </head>
 <body>
-    <!-- Back Button -->
-    <a href="index.html" class="back-button">Kembali ke Beranda</a>
-
     <h1>Pembelajaran Transformasi Geometri</h1>
     
     <div class="video-container">
@@ -212,6 +207,8 @@
             </div>
         </div>
     </div>
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">Kembali ke Beranda</a>
 
     <script>
         // Fallback jika thumbnail tidak tersedia
