@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LKS Transformasi Geometri</title>
     <style>
+        /* Global Styles dengan Gradient Background */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -12,41 +13,94 @@
             max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
-            background: #f5f7fa;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
             position: relative;
         }
 
-        /* Tombol Kembali */
+        /* Back Button Styles */
         .back-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            padding: 8px 15px;
-            background: #3498db;
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            padding: 10px 20px;
+            background: linear-gradient(to right, #2c3e50, #3498db);
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 50px;
             font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            z-index: 100;
         }
 
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            background: linear-gradient(to right, #3498db, #2c3e50);
+        }
+
+        .back-button::before {
+            content: "←";
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        /* Header dengan Desain Modern */
         .header {
             text-align: center;
             margin-bottom: 30px;
-            padding: 20px;
-            background: #3498db;
+            padding: 30px 20px;
+            background: linear-gradient(to right, #3498db, #2c3e50);
             color: white;
             border-radius: 10px;
-            margin-top: 50px; /* Memberi ruang untuk tombol kembali */
-            
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%, rgba(255,255,255,0.1) 100%);
+            z-index: 0;
+            border-radius: 15px;
+        }
+
+        .header h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            font-size: 28px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            position: relative;
+            z-index: 1;
+            margin: 10px 0 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Kop Lembar dengan Desain Card */
         .kop {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
             margin-bottom: 30px;
             background: white;
-            padding: 20px;
+            padding: 25px;
             border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            gap: 20px;
         }
 
         .student-info, .school-info {
@@ -62,83 +116,178 @@
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
+            color: #2c3e50;
+            font-size: 14px;
         }
 
         input[type="text"] {
             width: 100%;
-            padding: 8px 10px;
+            padding: 10px 12px;
             border: 1px solid #ddd;
-            border-radius: 4px;
+            border-radius: 6px;
+            transition: border 0.3s;
+            font-size: 14px;
+            box-sizing: border-box;
         }
 
+        input[type="text"]:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(52,152,219,0.2);
+        }
+
+        /* Desain Soal dengan Efek Hover */
         .question {
             background-color: white;
-            padding: 15px;
-            margin-bottom: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #3498db;
+        }
+
+        .question:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .question-number {
             font-weight: bold;
+            color: #2c3e50;
             margin-bottom: 10px;
+            font-size: 16px;
         }
 
         .answer-input {
-            margin-top: 10px;
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         input[type="text"].answer {
-            width: 100%;
-            padding: 8px 10px;
+            flex: 1;
+            min-width: 200px;
+            padding: 10px 12px;
             border: 1px solid #ddd;
+            border-radius: 6px;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        input[type="text"].answer:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 0 2px rgba(52,152,219,0.2);
+        }
+
+        .check-btn {
+            background: linear-gradient(to right, #3498db, #2980b9);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .check-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            background: linear-gradient(to right, #2980b9, #3498db);
+        }
+
+        .result {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: bold;
+            padding: 5px 10px;
             border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .correct {
+            color: #27ae60;
+            background-color: rgba(39, 174, 96, 0.1);
+        }
+
+        .incorrect {
+            color: #e74c3c;
+            background-color: rgba(231, 76, 60, 0.1);
         }
 
         .calculate-btn {
-            background: #2ecc71;
+            background: linear-gradient(to right, #2ecc71, #27ae60);
             color: white;
             border: none;
             padding: 12px 25px;
             border-radius: 6px;
             cursor: pointer;
             font-size: 16px;
-            margin-top: 20px;
+            margin-top: 30px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
 
+        .calculate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            background: linear-gradient(to right, #27ae60, #2ecc71);
+        }
+
         .score-display {
-            font-size: 18px;
-            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 25px;
+            color: #2c3e50;
+            text-align: center;
             padding: 15px;
             background: white;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-top: 4px solid #2ecc71;
         }
 
-        .correct-answer {
-            color: #27ae60;
-            font-weight: bold;
-        }
-
-        .incorrect-answer {
-            color: #e74c3c;
-            font-weight: bold;
-        }
-
+        /* Responsive Design */
         @media (max-width: 768px) {
             .kop {
                 flex-direction: column;
+            }
+            
+            .student-info, .school-info {
+                width: 100%;
+            }
+            
+            .back-button {
+                top: 15px;
+                left: 15px;
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+            
+            .header {
+                padding: 25px 15px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
             }
         }
     </style>
 </head>
 <body>
-     <!-- Tombol Kembali ke Beranda -->
-    <a href="index.html" class="back-button">← Beranda</a>
-    
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">Kembali ke Beranda</a>
+
     <div class="header">
         <h1>LKS Transformasi Geometri</h1>
         <p>Materi Translasi, Refleksi, Rotasi, dan Dilatasi</p>
@@ -154,6 +303,10 @@
                 <label for="kelas">Kelas:</label>
                 <input type="text" id="kelas" placeholder="Contoh: X MIPA 1">
             </div>
+            <div class="form-group">
+                <label for="absen">Nomor Absen:</label>
+                <input type="text" id="absen" placeholder="Nomor urut absen">
+            </div>
         </div>
         <div class="school-info">
             <div class="form-group">
@@ -164,6 +317,10 @@
                 <label for="tanggal">Tanggal:</label>
                 <input type="text" id="tanggal" placeholder="DD/MM/YYYY">
             </div>
+            <div class="form-group">
+                <label for="semester">Semester:</label>
+                <input type="text" id="semester" placeholder="Contoh: Ganjil 2023">
+            </div>
         </div>
     </div>
 
@@ -172,6 +329,8 @@
         <div class="question-number">1. Koordinat bayangan titik A (-4,2) oleh translasi T = (3,5) adalah ...</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a1" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(1, '-1,7')">Cek Jawaban</button>
+            <span class="result" id="r1"></span>
         </div>
     </div>
 
@@ -180,6 +339,8 @@
         <div class="question-number">2. Jika titik C (3, −7) dicerminkan terhadap sumbu X, maka bayangan titik C adalah ...</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a2" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(2, '3,7')">Cek Jawaban</button>
+            <span class="result" id="r2"></span>
         </div>
     </div>
 
@@ -188,6 +349,8 @@
         <div class="question-number">3. Titik A(2,4) dirotasi sebesar 60° berlawanan arah jarum jam dengan pusat (0,0). Maka bayangan titik A menjadi?</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a3" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(3, '1-2√3,2+√3')">Cek Jawaban</button>
+            <span class="result" id="r3"></span>
         </div>
     </div>
 
@@ -196,6 +359,8 @@
         <div class="question-number">4. Titik A (2, −3) didilatasikan dengan faktor skala k=4 dan pusat O (0,0). Tentukan koordinat bayangan titik A!</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a4" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(4, '8,-12')">Cek Jawaban</button>
+            <span class="result" id="r4"></span>
         </div>
     </div>
 
@@ -204,6 +369,8 @@
         <div class="question-number">5. Tentukan koordinat titik A(1,2) jika ditranslasikan terhadap T = (4,6)!</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a5" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(5, '5,8')">Cek Jawaban</button>
+            <span class="result" id="r5"></span>
         </div>
     </div>
 
@@ -212,6 +379,8 @@
         <div class="question-number">6. Jika titik D (−6, 9) dicerminkan terhadap sumbu Y, maka bayangan titik D adalah ...</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a6" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(6, '6,9')">Cek Jawaban</button>
+            <span class="result" id="r6"></span>
         </div>
     </div>
 
@@ -220,6 +389,8 @@
         <div class="question-number">7. Jika titik P(-1, 1) dirotasi pada titik B(3, -2) sejauh 90° maka hasilnya adalah ...</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a7" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(7, '2,5')">Cek Jawaban</button>
+            <span class="result" id="r7"></span>
         </div>
     </div>
 
@@ -228,6 +399,8 @@
         <div class="question-number">8. Titik B (−1, 5) didilatasikan dengan faktor skala k = −2 dan pusat O (0, 0). Tentukan koordinat bayangan titik B!</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a8" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(8, '2,-10')">Cek Jawaban</button>
+            <span class="result" id="r8"></span>
         </div>
     </div>
 
@@ -236,6 +409,8 @@
         <div class="question-number">9. Diketahui segitiga ABC dengan titik sudut A(1,2), B(3,4) dan C(2,6). Tentukan koordinat segitiga ABC jika digeser oleh T(1,2).</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a9" placeholder="Masukkan jawaban A', B', C'">
+            <button class="check-btn" onclick="checkAnswer(9, '2,4;4,6;3,8')">Cek Jawaban</button>
+            <span class="result" id="r9"></span>
         </div>
     </div>
 
@@ -244,6 +419,8 @@
         <div class="question-number">10. Jika titik E (1, −4) dicerminkan terhadap titik asal O (0,0) maka bayangan titik E adalah ...</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a10" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(10, '-1,4')">Cek Jawaban</button>
+            <span class="result" id="r10"></span>
         </div>
     </div>
 
@@ -252,6 +429,8 @@
         <div class="question-number">11. Bayangan titik P(2, -3) oleh rotasi R[O,90°] adalah ...</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a11" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(11, '3,2')">Cek Jawaban</button>
+            <span class="result" id="r11"></span>
         </div>
     </div>
 
@@ -260,6 +439,8 @@
         <div class="question-number">12. Titik C (3, 7) didilatasikan dengan faktor skala k = ½ dan pusat P (1, −2). Tentukan koordinat bayangan titik C!</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a12" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(12, '2,2.5')">Cek Jawaban</button>
+            <span class="result" id="r12"></span>
         </div>
     </div>
 
@@ -268,6 +449,8 @@
         <div class="question-number">13. Tentukan bayangan garis 2x - 5y - 1 = 0 oleh translasi T = (3,-2)</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a13" placeholder="Masukkan persamaan bayangan">
+            <button class="check-btn" onclick="checkAnswer(13, '2x-5y-17=0')">Cek Jawaban</button>
+            <span class="result" id="r13"></span>
         </div>
     </div>
 
@@ -276,6 +459,8 @@
         <div class="question-number">14. Jika titik F (5, −2) dicerminkan terhadap garis y = x, maka bayangan titik F adalah ...</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a14" placeholder="Masukkan jawaban (x,y)">
+            <button class="check-btn" onclick="checkAnswer(14, '-2,5')">Cek Jawaban</button>
+            <span class="result" id="r14"></span>
         </div>
     </div>
 
@@ -284,6 +469,8 @@
         <div class="question-number">15. Tentukan bayangan garis y = 5x + 4 oleh rotasi R(O,90°)</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a15" placeholder="Masukkan persamaan bayangan">
+            <button class="check-btn" onclick="checkAnswer(15, 'x+5y+4=0')">Cek Jawaban</button>
+            <span class="result" id="r15"></span>
         </div>
     </div>
 
@@ -292,6 +479,8 @@
         <div class="question-number">16. Sebuah segitiga memiliki titik-titik sudut D (2, 1), E (4, 3), dan F (0, 5). Jika segitiga tersebut didilatasikan dengan faktor skala k = 3 dan pusat O (0, 0), tentukan koordinat bayangan segitiga tersebut!</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a16" placeholder="Masukkan jawaban (x,y) untuk D', E', F'">
+            <button class="check-btn" onclick="checkAnswer(16, '6,3;12,9;0,15')">Cek Jawaban</button>
+            <span class="result" id="r16"></span>
         </div>
     </div>
 
@@ -300,6 +489,8 @@
         <div class="question-number">17. Tentukan bayangan garis y = 2x - 3 oleh translasi T = (2,3)</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a17" placeholder="Masukkan persamaan bayangan">
+            <button class="check-btn" onclick="checkAnswer(17, 'y=2x-4')">Cek Jawaban</button>
+            <span class="result" id="r17"></span>
         </div>
     </div>
 
@@ -308,6 +499,8 @@
         <div class="question-number">18. Jika kurva y = 2x² - x + 1 dicerminkan terhadap garis x = 3, maka hasil bayangan kurva adalah ...</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a18" placeholder="Masukkan persamaan bayangan">
+            <button class="check-btn" onclick="checkAnswer(18, 'y=2x²-23x+67')">Cek Jawaban</button>
+            <span class="result" id="r18"></span>
         </div>
     </div>
 
@@ -316,6 +509,8 @@
         <div class="question-number">19. Jika garis x - 2y = 5 diputar sejauh 90° terhadap titik (2, 4) berlawanan arah putaran jarum jam, maka persamaan bayangannya adalah ...</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a19" placeholder="Masukkan persamaan bayangan">
+            <button class="check-btn" onclick="checkAnswer(19, '2x+y=19')">Cek Jawaban</button>
+            <span class="result" id="r19"></span>
         </div>
     </div>
 
@@ -324,12 +519,13 @@
         <div class="question-number">20. Persamaan lingkaran x² + y² = 25 didilatasikan dengan faktor skala k = 2 dan pusat O (0, 0). Tentukan persamaan bayangan lingkaran tersebut!</div>
         <div class="answer-input">
             <input type="text" class="answer" id="a20" placeholder="Masukkan persamaan bayangan">
+            <button class="check-btn" onclick="checkAnswer(20, 'x²+y²=100')">Cek Jawaban</button>
+            <span class="result" id="r20"></span>
         </div>
     </div>
 
     <button class="calculate-btn" onclick="calculateScore()">Hitung Nilai</button>
     <div class="score-display" id="scoreDisplay"></div>
-    <div id="answerResults"></div>
 
     <script>
         // Array untuk menyimpan jawaban yang benar
@@ -340,31 +536,37 @@
             '6,3;12,9;0,15', 'y=2x-4', 'y=2x²-23x+67', '2x+y=19', 'x²+y²=100'
         ];
 
+        // Array untuk menyimpan status jawaban (benar/salah)
+        const answerStatus = Array(20).fill(false);
+
+        // Fungsi untuk memeriksa jawaban
+        function checkAnswer(questionNum, correctAnswer) {
+            const userAnswer = document.getElementById(`a${questionNum}`).value.trim();
+            const resultElement = document.getElementById(`r${questionNum}`);
+            
+            // Normalisasi jawaban untuk perbandingan
+            const normalizedUserAnswer = userAnswer.toLowerCase().replace(/\s+/g, '');
+            const normalizedCorrectAnswer = correctAnswer.toLowerCase().replace(/\s+/g, '');
+            
+            if (normalizedUserAnswer === normalizedCorrectAnswer) {
+                resultElement.textContent = "Benar!";
+                resultElement.className = "result correct";
+                answerStatus[questionNum-1] = true;
+            } else {
+                resultElement.textContent = "Salah!";
+                resultElement.className = "result incorrect";
+                answerStatus[questionNum-1] = false;
+            }
+        }
+
         // Fungsi untuk menghitung nilai
         function calculateScore() {
-            let correctCount = 0;
-            const results = [];
+            const correctCount = answerStatus.filter(status => status).length;
+            const totalQuestions = answerStatus.length;
+            const score = (correctCount / totalQuestions) * 100;
             
-            // Cek setiap jawaban
-            for (let i = 1; i <= 20; i++) {
-                const userAnswer = document.getElementById(`a${i}`).value.trim().toLowerCase().replace(/\s+/g, '');
-                const correctAnswer = correctAnswers[i-1].toLowerCase().replace(/\s+/g, '');
-                
-                if (userAnswer === correctAnswer) {
-                    correctCount++;
-                    results.push(`<span class="correct-answer">✔ Soal ${i} Benar</span>`);
-                } else {
-                    results.push(`<span class="incorrect-answer">✖ Soal ${i} Salah (Jawaban benar: ${correctAnswers[i-1]})</span>`);
-                }
-            }
-            
-            const score = (correctCount / 20) * 100;
-            
-            document.getElementById('scoreDisplay').innerHTML = 
-                `<strong>Nilai Anda: ${correctCount} dari 20 (${score.toFixed(1)}%)</strong>`;
-            
-            document.getElementById('answerResults').innerHTML = 
-                `<div style="margin-top: 20px;"><strong>Hasil Per Soal:</strong><br>${results.join('<br>')}</div>`;
+            document.getElementById('scoreDisplay').textContent = 
+                `Nilai Anda: ${correctCount} dari ${totalQuestions} (${score.toFixed(1)}%)`;
         }
     </script>
 </body>
